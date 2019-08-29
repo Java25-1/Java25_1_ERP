@@ -1,11 +1,16 @@
 package com.accp.erp.sunlueming.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.util.Date;
 /**
  * @description: 预收款
  * @author: apple
  */
+@TableName(value = "advancegather")
 public class Advancegather {
+    @TableId(value = "id")
     private String billid;//单据号码
 
     private Date billdate;//单据日期

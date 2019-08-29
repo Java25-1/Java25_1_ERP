@@ -2,56 +2,60 @@ package com.accp.erp.sunlueming.pojo;
 
 import java.util.Date;
 
+/**
+ * @description: 收款冲款
+ * @author: apple
+ */
 public class Clashfund {
-    private String billid;
+    private String billid;//单据号码
 
-    private Date billdate;
+    private Date billdate;//单据日期
 
-    private Integer sinid;
+    private Integer sinid;//单据类型
 
-    private String cliid;
+    private String cliid;//客户编号
 
-    private String clishortname;
+    private String clishortname;//客户简称
 
-    private String currencytype;
+    private String currencytype;//币别
 
-    private String reckontypef;
+    private String reckontypef;//结算方式一
 
-    private String reckontypes;
+    private String reckontypes;//结算方式二
 
-    private String reckontypet;
+    private String reckontypet;//结算方式三
 
-    private Float reckonmoneyf;
+    private Float reckonmoneyf;//金额1
 
-    private Float reckonmoneys;
+    private Float reckonmoneys;//金额2
 
-    private Float reckonmoneyt;
+    private Float reckonmoneyt;//金额3
 
-    private Float gatherdiscount;
+    private Float gatherdiscount;//折扣率
 
-    private Date gatherendaccountmonth;
+    private Date gatherendaccountmonth;//终止帐月
 
-    private String empid;
+    private String empid;//业务人员编号
 
-    private String empname;
+    private String empname;//业务人员
 
-    private String depid;
+    private String depid;//部门编号
 
-    private String depname;
+    private String depname;//所属部门
 
-    private String makeempname;
+    private String makeempname;//制单人员
 
-    private String auditingempname;
+    private String auditingempname;//复核人员
 
-    private Integer checkstate;
+    private Integer checkstate;//审核状态
 
-    private String remark;
+    private String remark;//备注
 
-    private Integer enables;
+    private Integer enables;//标识是否删除
 
-    private String safetyone;
+    private String safetyone;//保留字段
 
-    private String safetytwo;
+    private String safetytwo;//保留字段
 
     public String getBillid() {
         return billid;

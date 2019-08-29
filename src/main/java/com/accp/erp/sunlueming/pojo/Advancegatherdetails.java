@@ -1,25 +1,29 @@
 package com.accp.erp.sunlueming.pojo;
 
+/**
+ * @description:预收款明细
+ * @author: apple
+ */
 public class Advancegatherdetails {
-    private String billid;
+    private String billid;//单据号码
 
-    private Integer cotemark;
+    private Integer cotemark;//栏号
 
-    private Float promisedmoney;
+    private Float promisedmoney;//预收金额
 
-    private Float advancemoney;
+    private Float advancemoney;//预收余额
 
-    private String sinname;
+    private String sinname;//来源单别
 
-    private Integer originbillid;
+    private Integer originbillid;//来源单号
 
-    private String summary;
+    private String summary;//摘要
 
-    private Integer enables;
+    private Integer enables;//标识是否删除
 
-    private String safetyone;
+    private String safetyone;//保留字段
 
-    private String safetytwo;
+    private String safetytwo;//保留字段
 
     public String getBillid() {
         return billid;

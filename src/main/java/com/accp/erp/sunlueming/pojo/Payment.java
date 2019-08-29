@@ -2,52 +2,56 @@ package com.accp.erp.sunlueming.pojo;
 
 import java.util.Date;
 
+/**
+ * @description: 应付冲款
+ * @author: apple
+ */
 public class Payment {
-    private String payid;
+    private String payid;//应付冲款单单号
 
-    private Date paydate;
+    private Date paydate;//单据日期
 
-    private String purveyid;
+    private String purveyid;//供应商ID
 
-    private String purveyname;
+    private String purveyname;//供应商名称
 
-    private String paystrike1;
+    private String paystrike1;//结算方式1
 
-    private String paystrike2;
+    private String paystrike2;//结算方式2
 
-    private Float exchangerate;
+    private Float exchangerate;//汇率
 
-    private String paystrike3;
+    private String paystrike3;//结算方式3
 
-    private Date enddate;
+    private Date enddate;//终止日期
 
-    private Float discountrate;
+    private Float discountrate;//折扣率
 
-    private Float paymoney1;
+    private Float paymoney1;//金额1
 
-    private Float paymoney2;
+    private Float paymoney2;//金额2
 
-    private Float paymoney3;
+    private Float paymoney3;//金额3
 
-    private String paymakeing;
+    private String paymakeing;//制单人员
 
-    private String paydept;
+    private String paydept;//制单人所属部门
 
-    private String stodeptid;
+    private String stodeptid;//	部门ID
 
-    private String paycheckman;
+    private String paycheckman;//审核人员
 
-    private String payremark;
+    private String payremark;//备注
 
-    private String currency;
+    private String currency;//币别
 
-    private Integer isaditing;
+    private Integer isaditing;//是否审核
 
-    private Integer enables;
+    private Integer enables;//标识是否删除
 
-    private String safetyone;
+    private String safetyone;//保留字段1
 
-    private String safetytwo;
+    private String safetytwo;//保留字段2
 
     public String getPayid() {
         return payid;

@@ -2,50 +2,54 @@ package com.accp.erp.sunlueming.pojo;
 
 import java.util.Date;
 
+/**
+ * @description: 应付冲款单明细
+ * @author: apple
+ */
 public class Paymentdetails {
-    private String billid;
+    private String billid;//
 
-    private Integer cotemark;
+    private Integer cotemark;//
 
-    private String sinname;
+    private String sinname;//
 
-    private String originbillid;
+    private String originbillid;//
 
-    private Date originodddate;
+    private Date originodddate;//
 
-    private Float originoddmoney;
+    private Float originoddmoney;//
 
-    private Float currentlybalance;
+    private Float currentlybalance;//
 
-    private Float discountmoney;
+    private Float discountmoney;//
 
-    private Float clashmoney;
+    private Float clashmoney;//
 
-    private Float offsetbytheamountof;
+    private Float offsetbytheamountof;//
 
-    private Integer enables;
+    private Integer enables;//
 
-    private String invoicenumber;
+    private String invoicenumber;//
 
-    private String tradingname;
+    private String tradingname;//
 
-    private String departmentnumber;
+    private String departmentnumber;//
 
-    private String departmentname;
+    private String departmentname;//
 
-    private String buyer;
+    private String buyer;//
 
-    private String projectname;
+    private String projectname;//
 
-    private String currency;
+    private String currency;//
 
-    private Float exchangerate;
+    private Float exchangerate;//
 
-    private String afetyone;
+    private String afetyone;//
 
-    private String afetytwo;
+    private String afetytwo;//
 
-    private byte[] tradingobject;
+    private String tradingobject;//
 
     public String getBillid() {
         return billid;
@@ -215,11 +219,11 @@ public class Paymentdetails {
         this.afetytwo = afetytwo == null ? null : afetytwo.trim();
     }
 
-    public byte[] getTradingobject() {
+    public String getTradingobject() {
         return tradingobject;
     }
 
-    public void setTradingobject(byte[] tradingobject) {
+    public void setTradingobject(String tradingobject) {
         this.tradingobject = tradingobject;
     }
 }
