@@ -9,30 +9,40 @@
             <property name="suppressAllComments" value="true"/>  
         </commentGenerator>  
         <!--数据库链接URL，用户名、密码 -->  
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/erp" userId="root" password="root">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/erp" userId="root" password="12345678">
         </jdbcConnection>
         <javaTypeResolver>  
             <property name="forceBigDecimals" value="false"/>  
         </javaTypeResolver>  
         <!--pojo生成位置-->  
-        <javaModelGenerator targetPackage="com.accp.erp.xiangyueheng.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.accp.erp.sunlueming.pojo" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>  
             <property name="trimStrings" value="true"/>  
         </javaModelGenerator>  
         <!--映射文件生成位置-->  
-        <sqlMapGenerator targetPackage="mapping/xiangyueheng" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapping/sunlueming" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>  
         </sqlMapGenerator>  
         <!--dao生成位置-->  
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.xiangyueheng.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.sunlueming.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>  
-        </javaClientGenerator>  
+        </javaClientGenerator>
         <!-- 
 		tableName是数据库中的表名或视图名
 		domainObjectName是实体类名
 		-->  
 		<!--表1-->
-        <table tableName="depttab" domainObjectName="depttab" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<!--表2-->
+        <table tableName="advancegather" domainObjectName="Advancegather" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="advancegatherdetails" domainObjectName="Advancegatherdetails" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="clashfund" domainObjectName="Clashfund" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="clashfundDetailsOne" domainObjectName="ClashfundDetailsOne" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="advance" domainObjectName="Advance" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="advancedetails" domainObjectName="Advancedetails" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="payment" domainObjectName="Payment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="paymentdetails" domainObjectName="Paymentdetails" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="mainlistofpurchaseinvoicesdetatils2" domainObjectName="Mainlistofpurchaseinvoicesdetatils2" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="mainlistofpurchaseinvoicesdetatils" domainObjectName="Mainlistofpurchaseinvoicesdetatils" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="mainlistofpurchaseinvoices" domainObjectName="Mainlistofpurchaseinvoices" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
     </context>  
 </generatorConfiguration>  
