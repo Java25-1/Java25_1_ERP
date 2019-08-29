@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.AdvanceMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Advance" >
+    <result column="advid" property="advid" jdbcType="VARCHAR" />
+    <result column="advdate" property="advdate" jdbcType="DATE" />
+    <result column="Advnum" property="advnum" jdbcType="VARCHAR" />
+    <result column="Proofnumber" property="proofnumber" jdbcType="VARCHAR" />
+    <result column="purveyid" property="purveyid" jdbcType="VARCHAR" />
+    <result column="enddate" property="enddate" jdbcType="DATE" />
+    <result column="purveyname" property="purveyname" jdbcType="VARCHAR" />
+    <result column="advstrike1" property="advstrike1" jdbcType="VARCHAR" />
+    <result column="advstrike2" property="advstrike2" jdbcType="VARCHAR" />
+    <result column="advstrike3" property="advstrike3" jdbcType="VARCHAR" />
+    <result column="advmoney1" property="advmoney1" jdbcType="REAL" />
+    <result column="advmoney2" property="advmoney2" jdbcType="REAL" />
+    <result column="advmoney3" property="advmoney3" jdbcType="REAL" />
+    <result column="advmakeing" property="advmakeing" jdbcType="VARCHAR" />
+    <result column="stodept" property="stodept" jdbcType="VARCHAR" />
+    <result column="stodeptid" property="stodeptid" jdbcType="VARCHAR" />
+    <result column="advcheckman" property="advcheckman" jdbcType="VARCHAR" />
+    <result column="advremark" property="advremark" jdbcType="VARCHAR" />
+    <result column="isaditing" property="isaditing" jdbcType="INTEGER" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+    <result column="safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+    <result column="issafetyone" property="issafetyone" jdbcType="INTEGER" />
+  </resultMap>
+
+</mapper>

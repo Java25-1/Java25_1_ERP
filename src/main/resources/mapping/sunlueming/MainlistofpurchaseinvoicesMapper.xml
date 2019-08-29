@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.MainlistofpurchaseinvoicesMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Mainlistofpurchaseinvoices" >
+    <result column="storageid" property="storageid" jdbcType="VARCHAR" />
+    <result column="citationid" property="citationid" jdbcType="VARCHAR" />
+    <result column="clientsupply" property="clientsupply" jdbcType="VARCHAR" />
+    <result column="storagedate" property="storagedate" jdbcType="DATE" />
+    <result column="documenttype" property="documenttype" jdbcType="VARCHAR" />
+    <result column="documentint" property="documentint" jdbcType="VARCHAR" />
+    <result column="taxincluded" property="taxincluded" jdbcType="INTEGER" />
+    <result column="invoiceint" property="invoiceint" jdbcType="VARCHAR" />
+    <result column="checkstatus" property="checkstatus" jdbcType="VARCHAR" />
+    <result column="invoicetype" property="invoicetype" jdbcType="VARCHAR" />
+    <result column="voucherint" property="voucherint" jdbcType="VARCHAR" />
+    <result column="currency" property="currency" jdbcType="VARCHAR" />
+    <result column="CertificateNo" property="certificateno" jdbcType="VARCHAR" />
+    <result column="exchangerate" property="exchangerate" jdbcType="REAL" />
+    <result column="Purchaser" property="purchaser" jdbcType="VARCHAR" />
+    <result column="subordinatedepartments" property="subordinatedepartments" jdbcType="VARCHAR" />
+    <result column="attributionofaccounts" property="attributionofaccounts" jdbcType="VARCHAR" />
+    <result column="termofpayment" property="termofpayment" jdbcType="VARCHAR" />
+    <result column="daysofpaymentterms" property="daysofpaymentterms" jdbcType="INTEGER" />
+    <result column="dateofpayment" property="dateofpayment" jdbcType="DATE" />
+    <result column="accountmonth" property="accountmonth" jdbcType="DATE" />
+    <result column="paystrike1" property="paystrike1" jdbcType="VARCHAR" />
+    <result column="paystrike2" property="paystrike2" jdbcType="VARCHAR" />
+    <result column="paystrike3" property="paystrike3" jdbcType="VARCHAR" />
+    <result column="paymoney1" property="paymoney1" jdbcType="REAL" />
+    <result column="paymoney2" property="paymoney2" jdbcType="REAL" />
+    <result column="paymoney3" property="paymoney3" jdbcType="REAL" />
+    <result column="systempersonnel" property="systempersonnel" jdbcType="VARCHAR" />
+    <result column="reviewpersonne" property="reviewpersonne" jdbcType="VARCHAR" />
+    <result column="subordinateprojects" property="subordinateprojects" jdbcType="VARCHAR" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+    <result column="isaditing" property="isaditing" jdbcType="INTEGER" />
+    <result column="safetytone" property="safetytone" jdbcType="VARCHAR" />
+    <result column="safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>
