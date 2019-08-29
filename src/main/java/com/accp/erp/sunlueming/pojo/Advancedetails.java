@@ -1,21 +1,25 @@
 package com.accp.erp.sunlueming.pojo;
 
+/**
+ * @description: 预付款明细
+ * @author: apple
+ */
 public class Advancedetails {
-    private Float advdetmoney;
+    private Float advdetmoney;//预付金额
 
-    private String advdetoddtype;
+    private String advdetoddtype;//来源单别
 
-    private String advdetoddid;
+    private String advdetoddid;//来源单号
 
-    private String advdetdegest;
+    private String advdetdegest;//摘要
 
-    private Integer enables;
+    private Integer enables;//标识是否删除
 
-    private String safetyone;
+    private String safetyone;//保留字段
 
-    private String safetytwo;
+    private String safetytwo;//保留字段
 
-    private String advid;
+    private String advid;//主表单号
 
     public Float getAdvdetmoney() {
         return advdetmoney;

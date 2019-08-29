@@ -1,75 +1,78 @@
 package com.accp.erp.sunlueming.pojo;
 
 import java.util.Date;
-
+/**
+ * @description: 采购发票
+ * @author: apple
+ */
 public class Mainlistofpurchaseinvoices {
-    private String storageid;
+    private String storageid;//发票主表ID
 
-    private String citationid;
+    private String citationid;//供货商ID
 
-    private String clientsupply;
+    private String clientsupply;//供货商名称
 
-    private Date storagedate;
+    private Date storagedate;//单据日期
 
-    private String documenttype;
+    private String documenttype;//单据类型
 
-    private String documentint;
+    private String documentint;//单据号码
 
-    private Integer taxincluded;
+    private Integer taxincluded;//单价是否含税
 
-    private String invoiceint;
+    private String invoiceint;//发票号码
 
-    private String checkstatus;
+    private String checkstatus;//采购核对状态
 
-    private String invoicetype;
+    private String invoicetype;//发票类型
 
-    private String voucherint;
+    private String voucherint;//凭证编号
 
-    private String currency;
+    private String currency;//币别
 
-    private String certificateno;
+    private String certificateno;//差价凭证编号
 
-    private Float exchangerate;
+    private Float exchangerate;//汇率
 
-    private String purchaser;
+    private String purchaser;//采购人员
 
-    private String subordinatedepartments;
+    private String subordinatedepartments;//所属部门
 
-    private String attributionofaccounts;
+    private String attributionofaccounts;//账款归属
 
-    private String termofpayment;
+    private String termofpayment;//付款条件
 
-    private Integer daysofpaymentterms;
+    private Integer daysofpaymentterms;//付款条件天数
 
-    private Date dateofpayment;
+    private Date dateofpayment;//付款日期
 
-    private Date accountmonth;
+    private Date accountmonth;//账款月份
 
-    private String paystrike1;
+    private String paystrike1;//结算方式1
 
-    private String paystrike2;
+    private String paystrike2;//结算方式2
 
-    private String paystrike3;
+    private String paystrike3;//结算方式3
 
-    private Float paymoney1;
+    private Float paymoney1;//金额1
 
-    private Float paymoney2;
+    private Float paymoney2;//金额2
 
-    private Float paymoney3;
+    private Float paymoney3;//金额3
 
-    private String systempersonnel;
+    private String systempersonnel;//制单人员
 
-    private String reviewpersonne;
+    private String reviewpersonne;//复核人员
 
-    private String subordinateprojects;
+    private String subordinateprojects;//所属项目
 
-    private Integer enables;
+    private Integer enables;//标识是否删除
 
-    private Integer isaditing;
+    private Integer isaditing;//是否审核
 
-    private String safetytone;
+    private String safetytone;//保留字段
 
-    private String safetytwo;
+    private String safetytwo;//保留字段
 
     public String getStorageid() {
         return storageid;
