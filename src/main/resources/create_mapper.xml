@@ -15,16 +15,16 @@
             <property name="forceBigDecimals" value="false"/>  
         </javaTypeResolver>  
         <!--pojo生成位置-->  
-        <javaModelGenerator targetPackage="com.accp.erp.xiangyueheng.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.accp.erp.tansi.pojo" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>  
             <property name="trimStrings" value="true"/>  
         </javaModelGenerator>  
         <!--映射文件生成位置-->  
-        <sqlMapGenerator targetPackage="mapping/xiangyueheng" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapping/tansi" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>  
         </sqlMapGenerator>  
         <!--dao生成位置-->  
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.xiangyueheng.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.tansi.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>  
         </javaClientGenerator>  
         <!-- 
@@ -32,7 +32,7 @@
 		domainObjectName是实体类名
 		-->  
 		<!--表1-->
-        <table tableName="depttab" domainObjectName="depttab" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="movestorage" domainObjectName="Movestorage" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 		<!--表2-->
     </context>  
 </generatorConfiguration>  
