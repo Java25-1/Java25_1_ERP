@@ -1,20 +1,26 @@
 package com.accp.erp;
 
-import com.accp.erp.xiangyueheng.biz.depttabBiz;
+import com.accp.erp.sunlueming.biz.AdvancegatherBiz;
+import com.accp.erp.sunlueming.pojo.Advancegather;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ErpApplicationTests {
-@Autowired
-private depttabBiz biz;
+    @Resource
+    private AdvancegatherBiz biz;
+
     @Test
     public void contextLoads() {
-    biz.sel();
+        Advancegather a = new Advancegather();
+        //a.setBillid("1234");
+        biz.SelAll();
+
     }
 
 }

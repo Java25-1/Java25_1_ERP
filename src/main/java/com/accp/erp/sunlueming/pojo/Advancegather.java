@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @TableName(value = "advancegather")
 public class Advancegather {
-    @TableId(value = "id")
+    @TableId(value = "billid")
     private String billid;//单据号码
 
     private Date billdate;//单据日期

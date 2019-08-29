@@ -1,12 +1,17 @@
 package com.accp.erp.sunlueming.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 /**
  * @description: 预付款明细
  * @author: apple
  */
+@TableName(value = "advancedetails")
 public class Advancedetails {
     private Float advdetmoney;//预付金额
 
+    @TableId(value = "advdetoddtype")
     private String advdetoddtype;//来源单别
 
     private String advdetoddid;//来源单号
