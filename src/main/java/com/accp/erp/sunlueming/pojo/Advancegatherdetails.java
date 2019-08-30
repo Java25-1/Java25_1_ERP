@@ -1,10 +1,15 @@
 package com.accp.erp.sunlueming.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 /**
  * @description:预收款明细
  * @author: apple
  */
+
 public class Advancegatherdetails {
+    @TableId(value = "billid")
     private String billid;//单据号码
 
     private Integer cotemark;//栏号

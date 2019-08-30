@@ -39,12 +39,8 @@ public class AdvancegatherdetailsBiz {
      */
     @Transactional(propagation = Propagation.SUPPORTS, isolation = Isolation.READ_COMMITTED, readOnly = true)
     public List<Advancegatherdetails> SelSomeById(String billid) {
-
-        List<Advancegatherdetails> wrapper = maper.selectList(
-                new QueryWrapper<Advancegatherdetails>()
-                        .eq("advdetoddtype", billid)
-        );
-
+        List<Advancegatherdetails> wrapper = maper.selectList(new QueryWrapper<Advancegatherdetails>().eq("billId", billid));
         return wrapper;
     }
+    
 }
