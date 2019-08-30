@@ -1,6 +1,6 @@
 package com.accp.erp;
 
-import com.accp.erp.xiangyueheng.biz.depttabBiz;
+import com.accp.erp.xiangyueheng.biz.UserBiz;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +11,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ErpApplicationTests {
 @Autowired
-private depttabBiz biz;
+private UserBiz userBiz;
     @Test
     public void contextLoads() {
-    biz.sel();
+    userBiz.selByPwdAndAcction("Admin","123");
     }
 
 }
