@@ -38,9 +38,9 @@ public class AdvancegatherBiz {
      */
     @Transactional(propagation = Propagation.SUPPORTS, isolation = Isolation.READ_COMMITTED, readOnly = true)
     public List<Advancegather> SelAll(){
-        List a =maper.selectList(null);
-        System.out.println(a.size());
+        List<Advancegather> a =maper.selectList(null);
         return a;
     }
+
 
 }

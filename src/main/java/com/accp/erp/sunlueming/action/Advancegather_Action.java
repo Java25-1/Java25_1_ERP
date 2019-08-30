@@ -2,8 +2,8 @@ package com.accp.erp.sunlueming.action;
 
 import com.accp.erp.sunlueming.biz.AdvancegatherBiz;
 import com.accp.erp.sunlueming.pojo.Advancegather;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -15,12 +15,14 @@ import java.util.List;
  * @create: 2019-08-29 22:20
  **/
 @RequestMapping("/Advancegather")
-@Controller
+@RestController
 public class Advancegather_Action {
     @Resource
     private AdvancegatherBiz biz;
-//        @RequestMapping("sel/advancedetails")
-//    public List<Advancegather> SellAll(){
-//            return biz
-//    }
+
+    @RequestMapping("/sel/advancedetails")
+    public List<Advancegather> SellAll() {
+        return biz.SelAll();
+    }
+
 }

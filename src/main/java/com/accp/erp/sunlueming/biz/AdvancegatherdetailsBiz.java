@@ -42,5 +42,5 @@ public class AdvancegatherdetailsBiz {
         List<Advancegatherdetails> wrapper = maper.selectList(new QueryWrapper<Advancegatherdetails>().eq("billId", billid));
         return wrapper;
     }
-    
+
 }
