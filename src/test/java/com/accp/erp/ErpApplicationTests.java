@@ -1,6 +1,7 @@
 package com.accp.erp;
 
 import com.accp.erp.xiangyueheng.biz.UserBiz;
+import com.accp.erp.xiangyueheng.pojo.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,8 @@ public class ErpApplicationTests {
 private UserBiz userBiz;
     @Test
     public void contextLoads() {
-    userBiz.selByPwdAndAcction("Admin","123");
+        User admin = userBiz.selectByPwdByAccount("admin", "202cb962ac59075b964b07152d234b70");
+        System.out.println(admin);
     }
 
 }
