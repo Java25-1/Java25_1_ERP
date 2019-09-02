@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.MainlistofpurchaseinvoicesdetatilsMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Mainlistofpurchaseinvoicesdetatils" >
+    <result column="invoiceddetailsid" property="invoiceddetailsid" jdbcType="VARCHAR" />
+    <result column="lineint" property="lineint" jdbcType="INTEGER" />
+    <result column="materialint" property="materialint" jdbcType="VARCHAR" />
+    <result column="namematerial" property="namematerial" jdbcType="VARCHAR" />
+    <result column="specificationtype" property="specificationtype" jdbcType="VARCHAR" />
+    <result column="nameofunit" property="nameofunit" jdbcType="VARCHAR" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="unitprice" property="unitprice" jdbcType="REAL" />
+    <result column="amountofmoney" property="amountofmoney" jdbcType="REAL" />
+    <result column="taxrate" property="taxrate" jdbcType="REAL" />
+    <result column="taxamount" property="taxamount" jdbcType="REAL" />
+    <result column="taxableamount" property="taxableamount" jdbcType="REAL" />
+    <result column="unenteredquantity" property="unenteredquantity" jdbcType="INTEGER" />
+    <result column="purchasingorderint" property="purchasingorderint" jdbcType="VARCHAR" />
+    <result column="notestoentries" property="notestoentries" jdbcType="VARCHAR" />
+    <result column="safetytone" property="safetytone" jdbcType="VARCHAR" />
+    <result column="safetyttwo" property="safetyttwo" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>

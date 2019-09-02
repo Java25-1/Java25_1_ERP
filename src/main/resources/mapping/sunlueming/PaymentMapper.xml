@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.PaymentMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Payment" >
+    <result column="payid" property="payid" jdbcType="VARCHAR" />
+    <result column="paydate" property="paydate" jdbcType="DATE" />
+    <result column="purveyid" property="purveyid" jdbcType="VARCHAR" />
+    <result column="purveyname" property="purveyname" jdbcType="VARCHAR" />
+    <result column="paystrike1" property="paystrike1" jdbcType="VARCHAR" />
+    <result column="paystrike2" property="paystrike2" jdbcType="VARCHAR" />
+    <result column="exchangerate" property="exchangerate" jdbcType="REAL" />
+    <result column="paystrike3" property="paystrike3" jdbcType="VARCHAR" />
+    <result column="Enddate" property="enddate" jdbcType="DATE" />
+    <result column="discountrate" property="discountrate" jdbcType="REAL" />
+    <result column="paymoney1" property="paymoney1" jdbcType="REAL" />
+    <result column="paymoney2" property="paymoney2" jdbcType="REAL" />
+    <result column="paymoney3" property="paymoney3" jdbcType="REAL" />
+    <result column="paymakeing" property="paymakeing" jdbcType="VARCHAR" />
+    <result column="paydept" property="paydept" jdbcType="VARCHAR" />
+    <result column="stodeptid" property="stodeptid" jdbcType="VARCHAR" />
+    <result column="paycheckman" property="paycheckman" jdbcType="VARCHAR" />
+    <result column="payremark" property="payremark" jdbcType="VARCHAR" />
+    <result column="Currency" property="currency" jdbcType="VARCHAR" />
+    <result column="isaditing" property="isaditing" jdbcType="INTEGER" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+    <result column="safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>

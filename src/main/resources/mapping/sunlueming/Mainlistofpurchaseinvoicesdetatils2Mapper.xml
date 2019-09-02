@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.Mainlistofpurchaseinvoicesdetatils2Mapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Mainlistofpurchaseinvoicesdetatils2" >
+    <result column="invoicelist" property="invoicelist" jdbcType="VARCHAR" />
+    <result column="lineint" property="lineint" jdbcType="INTEGER" />
+    <result column="materialint" property="materialint" jdbcType="VARCHAR" />
+    <result column="namematerial" property="namematerial" jdbcType="VARCHAR" />
+    <result column="specificationtype" property="specificationtype" jdbcType="VARCHAR" />
+    <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="invoicequantity" property="invoicequantity" jdbcType="INTEGER" />
+    <result column="invoiceunitprice" property="invoiceunitprice" jdbcType="REAL" />
+    <result column="invoiceamount" property="invoiceamount" jdbcType="REAL" />
+    <result column="invoicetaxrate" property="invoicetaxrate" jdbcType="REAL" />
+    <result column="invoicetax" property="invoicetax" jdbcType="REAL" />
+    <result column="invoicetaxableamount" property="invoicetaxableamount" jdbcType="REAL" />
+    <result column="sinkdifference" property="sinkdifference" jdbcType="REAL" />
+    <result column="spread" property="spread" jdbcType="REAL" />
+    <result column="standardcurrency" property="standardcurrency" jdbcType="REAL" />
+    <result column="totaldifference" property="totaldifference" jdbcType="REAL" />
+    <result column="sourcelist" property="sourcelist" jdbcType="VARCHAR" />
+    <result column="sourceno" property="sourceno" jdbcType="VARCHAR" />
+    <result column="notestoentries" property="notestoentries" jdbcType="VARCHAR" />
+    <result column="safetytone" property="safetytone" jdbcType="VARCHAR" />
+    <result column="safetyttwo" property="safetyttwo" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>

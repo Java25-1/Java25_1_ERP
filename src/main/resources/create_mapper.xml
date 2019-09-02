@@ -15,16 +15,28 @@
             <property name="forceBigDecimals" value="false"/>  
         </javaTypeResolver>  
         <!--pojo生成位置-->  
+<<<<<<< HEAD
         <javaModelGenerator targetPackage="com.accp.erp.yangtao.pojo" targetProject="src/main/java">
+=======
+        <javaModelGenerator targetPackage="com.accp.erp.xiangyueheng.pojo" targetProject="src/main/java">
+>>>>>>> branch 'master' of https://github.com/Java25-1/Java25_1_ERP.git
             <property name="enableSubPackages" value="true"/>  
             <property name="trimStrings" value="true"/>  
         </javaModelGenerator>  
         <!--映射文件生成位置-->  
+<<<<<<< HEAD
         <sqlMapGenerator targetPackage="mapping/yangtao" targetProject="src/main/resources">
+=======
+        <sqlMapGenerator targetPackage="mapping/xiangyueheng" targetProject="src/main/resources">
+>>>>>>> branch 'master' of https://github.com/Java25-1/Java25_1_ERP.git
             <property name="enableSubPackages" value="true"/>  
         </sqlMapGenerator>  
         <!--dao生成位置-->  
+<<<<<<< HEAD
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.yangtao.dao" targetProject="src/main/java">
+=======
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.xiangyueheng.dao" targetProject="src/main/java">
+>>>>>>> branch 'master' of https://github.com/Java25-1/Java25_1_ERP.git
             <property name="enableSubPackages" value="true"/>  
         </javaClientGenerator>  
         <!-- 
@@ -32,7 +44,15 @@
 		domainObjectName是实体类名
 		-->  
 		<!--表1-->
+<<<<<<< HEAD
         <table tableName="employee" domainObjectName="Empolyee" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+=======
+        <!--<table tableName="permissionAndRoleRelation" domainObjectName="PermissionAndRoleRelation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <table tableName="permission" domainObjectName="Permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <!--<table tableName="roleandUser" domainObjectName="RoleandUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="role" domainObjectName="Role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+>>>>>>> branch 'master' of https://github.com/Java25-1/Java25_1_ERP.git
 		<!--表2-->
 		<table tableName="materiel" domainObjectName="Materiel" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
         

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.erp.xiangyueheng.dao.UserDao">
+	<resultMap type="com.accp.erp.xiangyueheng.pojo.User" id="userMap">
+		<id column="uid" jdbcType="INTEGER" property="uid" />
+		<result column="account" jdbcType="VARCHAR" property="account" />
+		<result column="Userpwd" jdbcType="VARCHAR" property="userpwd" />
+		<result column="Deptid" jdbcType="VARCHAR" property="deptid" />
+		<result column="deptname" jdbcType="VARCHAR" property="deptname" />
+		<result column="uimg" jdbcType="VARCHAR" property="uimg" />
+		<result column="status" jdbcType="INTEGER" property="status" />
+		<result column="empid" jdbcType="VARCHAR" property="empid" />
+		<result column="empname" jdbcType="VARCHAR" property="empname" />
+		<collection property="roles" column="uid" resultMap="roleMap" />
+	</resultMap>
+	<resultMap type="com.accp.erp.xiangyueheng.pojo.role" id="roleMap">
+		<id column="rid" jdbcType="INTEGER" property="rid" />
+		<result column="rcode" jdbcType="VARCHAR" property="rcode" />
+		<result column="rname" jdbcType="VARCHAR" property="rname" />
+		<result column="rstatus" jdbcType="INTEGER" property="rstatus" />
+		<result column="createdate" jdbcType="DATE" property="createdate" />
+		<result column="createby" jdbcType="VARCHAR" property="createby" />
+		<collection property="functions" column="rid" resultMap="functionMap" />
+	</resultMap>
+
+	<resultMap type="com.accp.erp.xiangyueheng.pojo.function" id="functionMap">
+		<id column="fid" jdbcType="INTEGER" property="fid" />
+		<result column="fcode" jdbcType="VARCHAR" property="fcode" />
+		<result column="fname" jdbcType="VARCHAR" property="fname" />
+		<result column="furl" jdbcType="VARCHAR" property="furl" />
+		<result column="ficon" jdbcType="VARCHAR" property="ficon" />
+		<result column="fpid" jdbcType="INTEGER" property="fpid" />
+		<result column="createdate" jdbcType="DATE" property="createdate" />
+		<result column="isTrue" jdbcType="INTEGER" property="istrue" />
+		<association property="functionf" column="fpid" select="functionId"></association>
+	</resultMap>
+	
+	<select id="functionId" resultMap="functionMap">
+		 SELECT * FROM `function`  WHERE `fid` = #{0}
+	</select>
+	<select id="getuser" resultMap="userMap">
+		SELECT
+		`user`.uid,
+		`user`.account,
+		`user`.Userpwd,
+		`user`.Deptid,
+		`user`.deptname,
+		`user`.uimg,
+		`user`.`status`,
+		`user`.empid,
+		`user`.empname,
+		userandrole.Urid,
+		userandrole.uId,
+		userandrole.rid,
+		userandrole.Createby,
+		userandrole.Createdate,
+		role.rid,
+		role.rcode,
+		role.rname,
+		role.rstatus,
+		role.createdate,
+		role.createby,
+		permission.pid,
+		permission.rid,
+		permission.fid,
+		permission.createdate,
+		permission.createby,
+		`function`.fid,
+		`function`.fcode,
+		`function`.fname,
+		`function`.furl,
+		`function`.ficon,
+		`function`.fpid,
+		`function`.createdate,
+		`function`.isTrue
+		FROM
+		`user`
+		LEFT JOIN userandrole ON `user`.uid =
+		userandrole.Urid
+		LEFT JOIN role ON userandrole.rid = role.rid
+		LEFT
+		JOIN permission ON role.rid = permission.rid
+		LEFT JOIN `function` ON
+		permission.fid = `function`.fid
+		WHERE
+		`user`.account = #{ac} AND
+		`user`.Userpwd =#{pws}
+	</select>
+</mapper>
