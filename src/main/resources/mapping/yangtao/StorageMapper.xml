@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.erp.yangtao.dao.IStorageDao">
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Storage">
+    <result column="Stoid" jdbcType="VARCHAR" property="stoid" />
+    <result column="Stoname" jdbcType="VARCHAR" property="stoname" />
+    <result column="Stosimplename" jdbcType="VARCHAR" property="stosimplename" />
+    <result column="Stoconnectper" jdbcType="VARCHAR" property="stoconnectper" />
+    <result column="Stoempid" jdbcType="VARCHAR" property="stoempid" />
+    <result column="Stophone" jdbcType="VARCHAR" property="stophone" />
+    <result column="Stoaddress" jdbcType="VARCHAR" property="stoaddress" />
+    <result column="Storemark" jdbcType="VARCHAR" property="storemark" />
+    <result column="Safetyone" jdbcType="VARCHAR" property="safetyone" />
+    <result column="Safetytwo" jdbcType="VARCHAR" property="safetytwo" />
+    <result column="Enables" jdbcType="INTEGER" property="enables" />
+    <result column="Extend0" jdbcType="VARCHAR" property="extend0" />
+    <result column="Extend1" jdbcType="VARCHAR" property="extend1" />
+    <result column="Extend2" jdbcType="VARCHAR" property="extend2" />
+    <result column="Extend3" jdbcType="VARCHAR" property="extend3" />
+    <result column="Extend4" jdbcType="VARCHAR" property="extend4" />
+  </resultMap>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Storage">
+    insert into storage (Stoid, Stoname, Stosimplename, 
+      Stoconnectper, Stoempid, Stophone, 
+      Stoaddress, Storemark, Safetyone, 
+      Safetytwo, Enables, Extend0, 
+      Extend1, Extend2, Extend3, 
+      Extend4)
+    values (#{stoid,jdbcType=VARCHAR}, #{stoname,jdbcType=VARCHAR}, #{stosimplename,jdbcType=VARCHAR}, 
+      #{stoconnectper,jdbcType=VARCHAR}, #{stoempid,jdbcType=VARCHAR}, #{stophone,jdbcType=VARCHAR}, 
+      #{stoaddress,jdbcType=VARCHAR}, #{storemark,jdbcType=VARCHAR}, #{safetyone,jdbcType=VARCHAR}, 
+      #{safetytwo,jdbcType=VARCHAR}, #{enables,jdbcType=INTEGER}, #{extend0,jdbcType=VARCHAR}, 
+      #{extend1,jdbcType=VARCHAR}, #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR}, 
+      #{extend4,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Storage">
+    insert into storage
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="stoid != null">
+        Stoid,
+      </if>
+      <if test="stoname != null">
+        Stoname,
+      </if>
+      <if test="stosimplename != null">
+        Stosimplename,
+      </if>
+      <if test="stoconnectper != null">
+        Stoconnectper,
+      </if>
+      <if test="stoempid != null">
+        Stoempid,
+      </if>
+      <if test="stophone != null">
+        Stophone,
+      </if>
+      <if test="stoaddress != null">
+        Stoaddress,
+      </if>
+      <if test="storemark != null">
+        Storemark,
+      </if>
+      <if test="safetyone != null">
+        Safetyone,
+      </if>
+      <if test="safetytwo != null">
+        Safetytwo,
+      </if>
+      <if test="enables != null">
+        Enables,
+      </if>
+      <if test="extend0 != null">
+        Extend0,
+      </if>
+      <if test="extend1 != null">
+        Extend1,
+      </if>
+      <if test="extend2 != null">
+        Extend2,
+      </if>
+      <if test="extend3 != null">
+        Extend3,
+      </if>
+      <if test="extend4 != null">
+        Extend4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="stoid != null">
+        #{stoid,jdbcType=VARCHAR},
+      </if>
+      <if test="stoname != null">
+        #{stoname,jdbcType=VARCHAR},
+      </if>
+      <if test="stosimplename != null">
+        #{stosimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="stoconnectper != null">
+        #{stoconnectper,jdbcType=VARCHAR},
+      </if>
+      <if test="stoempid != null">
+        #{stoempid,jdbcType=VARCHAR},
+      </if>
+      <if test="stophone != null">
+        #{stophone,jdbcType=VARCHAR},
+      </if>
+      <if test="stoaddress != null">
+        #{stoaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="storemark != null">
+        #{storemark,jdbcType=VARCHAR},
+      </if>
+      <if test="safetyone != null">
+        #{safetyone,jdbcType=VARCHAR},
+      </if>
+      <if test="safetytwo != null">
+        #{safetytwo,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null">
+        #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null">
+        #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null">
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null">
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null">
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null">
+        #{extend4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

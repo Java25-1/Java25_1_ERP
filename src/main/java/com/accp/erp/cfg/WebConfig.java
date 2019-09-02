@@ -40,6 +40,6 @@ public class WebConfig implements WebMvcConfigurer {
 				// 是否允许证书 不再默认开启
 				.allowCredentials(true)
 				// 设置允许的方法
-				.allowedMethods("GET,POST,*");
+				.allowedMethods("*");
 	}
 }

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.yangtao.dao.ClientMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Client" >
+    <result column="clioldoutdate" property="clioldoutdate" jdbcType="DATE" />
+    <result column="clioldintodate" property="clioldintodate" jdbcType="DATE" />
+    <result column="clinewoutdate" property="clinewoutdate" jdbcType="DATE" />
+    <result column="clinewintodate" property="clinewintodate" jdbcType="DATE" />
+    <result column="clicreatedate" property="clicreatedate" jdbcType="DATE" />
+    <result column="clistopdate" property="clistopdate" jdbcType="DATE" />
+    <result column="climonthreckoning" property="climonthreckoning" jdbcType="DATE" />
+    <result column="cliqcpremoney" property="cliqcpremoney" jdbcType="INTEGER" />
+    <result column="cliqcdealmoney" property="cliqcdealmoney" jdbcType="INTEGER" />
+    <result column="cliqmpremoney" property="cliqmpremoney" jdbcType="INTEGER" />
+    <result column="clitrash" property="clitrash" jdbcType="INTEGER" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.accp.erp.yangtao.pojo.ClientWithBLOBs" extends="BaseResultMap" >
+    <result column="cliid" property="cliid" jdbcType="VARBINARY" />
+    <result column="clitypeid" property="clitypeid" jdbcType="VARBINARY" />
+    <result column="cliname" property="cliname" jdbcType="VARBINARY" />
+    <result column="clishortname" property="clishortname" jdbcType="VARBINARY" />
+    <result column="cliaddress" property="cliaddress" jdbcType="VARBINARY" />
+    <result column="cliarea" property="cliarea" jdbcType="VARBINARY" />
+    <result column="cliename" property="cliename" jdbcType="VARBINARY" />
+    <result column="cliprincipal" property="cliprincipal" jdbcType="VARBINARY" />
+    <result column="clilinkman" property="clilinkman" jdbcType="VARBINARY" />
+    <result column="cliphoneone" property="cliphoneone" jdbcType="VARBINARY" />
+    <result column="cliphonetwo" property="cliphonetwo" jdbcType="VARBINARY" />
+    <result column="cliphonethree" property="cliphonethree" jdbcType="VARBINARY" />
+    <result column="clibankaccounts" property="clibankaccounts" jdbcType="VARBINARY" />
+    <result column="cliopenbank" property="cliopenbank" jdbcType="VARBINARY" />
+    <result column="empid" property="empid" jdbcType="VARBINARY" />
+    <result column="climobilephone" property="climobilephone" jdbcType="VARBINARY" />
+    <result column="cliemail" property="cliemail" jdbcType="VARBINARY" />
+    <result column="cliweb" property="cliweb" jdbcType="VARBINARY" />
+    <result column="clifaxes" property="clifaxes" jdbcType="VARBINARY" />
+    <result column="clidiscount" property="clidiscount" jdbcType="VARBINARY" />
+    <result column="clipricestep" property="clipricestep" jdbcType="VARBINARY" />
+    <result column="clizhangkuanedu" property="clizhangkuanedu" jdbcType="VARBINARY" />
+    <result column="cliremainedu" property="cliremainedu" jdbcType="VARBINARY" />
+    <result column="clicondition" property="clicondition" jdbcType="VARBINARY" />
+    <result column="clicreditstep" property="clicreditstep" jdbcType="VARBINARY" />
+    <result column="cliotherremark" property="cliotherremark" jdbcType="VARBINARY" />
+    <result column="safetyone" property="safetyone" jdbcType="VARBINARY" />
+    <result column="safetytwo" property="safetytwo" jdbcType="VARBINARY" />
+  </resultMap>
+  <sql id="Blob_Column_List" >
+    cliid, clitypeid, cliname, clishortname, cliaddress, cliarea, cliename, cliprincipal, 
+    clilinkman, cliphoneone, cliphonetwo, cliphonethree, clibankaccounts, cliopenbank, 
+    empid, climobilephone, cliemail, cliweb, clifaxes, clidiscount, clipricestep, clizhangkuanedu, 
+    cliremainedu, clicondition, clicreditstep, cliotherremark, safetyone, safetytwo
+  </sql>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.ClientWithBLOBs" >
+    insert into client (clioldoutdate, clioldintodate, clinewoutdate, 
+      clinewintodate, clicreatedate, clistopdate, 
+      climonthreckoning, cliqcpremoney, cliqcdealmoney, 
+      cliqmpremoney, clitrash, enables, 
+      cliid, clitypeid, cliname, 
+      clishortname, cliaddress, cliarea, 
+      cliename, cliprincipal, clilinkman, 
+      cliphoneone, cliphonetwo, cliphonethree, 
+      clibankaccounts, cliopenbank, empid, 
+      climobilephone, cliemail, cliweb, 
+      clifaxes, clidiscount, clipricestep, 
+      clizhangkuanedu, cliremainedu, clicondition, 
+      clicreditstep, cliotherremark, safetyone, 
+      safetytwo)
+    values (#{clioldoutdate,jdbcType=DATE}, #{clioldintodate,jdbcType=DATE}, #{clinewoutdate,jdbcType=DATE}, 
+      #{clinewintodate,jdbcType=DATE}, #{clicreatedate,jdbcType=DATE}, #{clistopdate,jdbcType=DATE}, 
+      #{climonthreckoning,jdbcType=DATE}, #{cliqcpremoney,jdbcType=INTEGER}, #{cliqcdealmoney,jdbcType=INTEGER}, 
+      #{cliqmpremoney,jdbcType=INTEGER}, #{clitrash,jdbcType=INTEGER}, #{enables,jdbcType=INTEGER}, 
+      #{cliid,jdbcType=VARBINARY}, #{clitypeid,jdbcType=VARBINARY}, #{cliname,jdbcType=VARBINARY}, 
+      #{clishortname,jdbcType=VARBINARY}, #{cliaddress,jdbcType=VARBINARY}, #{cliarea,jdbcType=VARBINARY}, 
+      #{cliename,jdbcType=VARBINARY}, #{cliprincipal,jdbcType=VARBINARY}, #{clilinkman,jdbcType=VARBINARY}, 
+      #{cliphoneone,jdbcType=VARBINARY}, #{cliphonetwo,jdbcType=VARBINARY}, #{cliphonethree,jdbcType=VARBINARY}, 
+      #{clibankaccounts,jdbcType=VARBINARY}, #{cliopenbank,jdbcType=VARBINARY}, #{empid,jdbcType=VARBINARY}, 
+      #{climobilephone,jdbcType=VARBINARY}, #{cliemail,jdbcType=VARBINARY}, #{cliweb,jdbcType=VARBINARY}, 
+      #{clifaxes,jdbcType=VARBINARY}, #{clidiscount,jdbcType=VARBINARY}, #{clipricestep,jdbcType=VARBINARY}, 
+      #{clizhangkuanedu,jdbcType=VARBINARY}, #{cliremainedu,jdbcType=VARBINARY}, #{clicondition,jdbcType=VARBINARY}, 
+      #{clicreditstep,jdbcType=VARBINARY}, #{cliotherremark,jdbcType=VARBINARY}, #{safetyone,jdbcType=VARBINARY}, 
+      #{safetytwo,jdbcType=VARBINARY})
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.ClientWithBLOBs" >
+    insert into client
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="clioldoutdate != null" >
+        clioldoutdate,
+      </if>
+      <if test="clioldintodate != null" >
+        clioldintodate,
+      </if>
+      <if test="clinewoutdate != null" >
+        clinewoutdate,
+      </if>
+      <if test="clinewintodate != null" >
+        clinewintodate,
+      </if>
+      <if test="clicreatedate != null" >
+        clicreatedate,
+      </if>
+      <if test="clistopdate != null" >
+        clistopdate,
+      </if>
+      <if test="climonthreckoning != null" >
+        climonthreckoning,
+      </if>
+      <if test="cliqcpremoney != null" >
+        cliqcpremoney,
+      </if>
+      <if test="cliqcdealmoney != null" >
+        cliqcdealmoney,
+      </if>
+      <if test="cliqmpremoney != null" >
+        cliqmpremoney,
+      </if>
+      <if test="clitrash != null" >
+        clitrash,
+      </if>
+      <if test="enables != null" >
+        enables,
+      </if>
+      <if test="cliid != null" >
+        cliid,
+      </if>
+      <if test="clitypeid != null" >
+        clitypeid,
+      </if>
+      <if test="cliname != null" >
+        cliname,
+      </if>
+      <if test="clishortname != null" >
+        clishortname,
+      </if>
+      <if test="cliaddress != null" >
+        cliaddress,
+      </if>
+      <if test="cliarea != null" >
+        cliarea,
+      </if>
+      <if test="cliename != null" >
+        cliename,
+      </if>
+      <if test="cliprincipal != null" >
+        cliprincipal,
+      </if>
+      <if test="clilinkman != null" >
+        clilinkman,
+      </if>
+      <if test="cliphoneone != null" >
+        cliphoneone,
+      </if>
+      <if test="cliphonetwo != null" >
+        cliphonetwo,
+      </if>
+      <if test="cliphonethree != null" >
+        cliphonethree,
+      </if>
+      <if test="clibankaccounts != null" >
+        clibankaccounts,
+      </if>
+      <if test="cliopenbank != null" >
+        cliopenbank,
+      </if>
+      <if test="empid != null" >
+        empid,
+      </if>
+      <if test="climobilephone != null" >
+        climobilephone,
+      </if>
+      <if test="cliemail != null" >
+        cliemail,
+      </if>
+      <if test="cliweb != null" >
+        cliweb,
+      </if>
+      <if test="clifaxes != null" >
+        clifaxes,
+      </if>
+      <if test="clidiscount != null" >
+        clidiscount,
+      </if>
+      <if test="clipricestep != null" >
+        clipricestep,
+      </if>
+      <if test="clizhangkuanedu != null" >
+        clizhangkuanedu,
+      </if>
+      <if test="cliremainedu != null" >
+        cliremainedu,
+      </if>
+      <if test="clicondition != null" >
+        clicondition,
+      </if>
+      <if test="clicreditstep != null" >
+        clicreditstep,
+      </if>
+      <if test="cliotherremark != null" >
+        cliotherremark,
+      </if>
+      <if test="safetyone != null" >
+        safetyone,
+      </if>
+      <if test="safetytwo != null" >
+        safetytwo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="clioldoutdate != null" >
+        #{clioldoutdate,jdbcType=DATE},
+      </if>
+      <if test="clioldintodate != null" >
+        #{clioldintodate,jdbcType=DATE},
+      </if>
+      <if test="clinewoutdate != null" >
+        #{clinewoutdate,jdbcType=DATE},
+      </if>
+      <if test="clinewintodate != null" >
+        #{clinewintodate,jdbcType=DATE},
+      </if>
+      <if test="clicreatedate != null" >
+        #{clicreatedate,jdbcType=DATE},
+      </if>
+      <if test="clistopdate != null" >
+        #{clistopdate,jdbcType=DATE},
+      </if>
+      <if test="climonthreckoning != null" >
+        #{climonthreckoning,jdbcType=DATE},
+      </if>
+      <if test="cliqcpremoney != null" >
+        #{cliqcpremoney,jdbcType=INTEGER},
+      </if>
+      <if test="cliqcdealmoney != null" >
+        #{cliqcdealmoney,jdbcType=INTEGER},
+      </if>
+      <if test="cliqmpremoney != null" >
+        #{cliqmpremoney,jdbcType=INTEGER},
+      </if>
+      <if test="clitrash != null" >
+        #{clitrash,jdbcType=INTEGER},
+      </if>
+      <if test="enables != null" >
+        #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="cliid != null" >
+        #{cliid,jdbcType=VARBINARY},
+      </if>
+      <if test="clitypeid != null" >
+        #{clitypeid,jdbcType=VARBINARY},
+      </if>
+      <if test="cliname != null" >
+        #{cliname,jdbcType=VARBINARY},
+      </if>
+      <if test="clishortname != null" >
+        #{clishortname,jdbcType=VARBINARY},
+      </if>
+      <if test="cliaddress != null" >
+        #{cliaddress,jdbcType=VARBINARY},
+      </if>
+      <if test="cliarea != null" >
+        #{cliarea,jdbcType=VARBINARY},
+      </if>
+      <if test="cliename != null" >
+        #{cliename,jdbcType=VARBINARY},
+      </if>
+      <if test="cliprincipal != null" >
+        #{cliprincipal,jdbcType=VARBINARY},
+      </if>
+      <if test="clilinkman != null" >
+        #{clilinkman,jdbcType=VARBINARY},
+      </if>
+      <if test="cliphoneone != null" >
+        #{cliphoneone,jdbcType=VARBINARY},
+      </if>
+      <if test="cliphonetwo != null" >
+        #{cliphonetwo,jdbcType=VARBINARY},
+      </if>
+      <if test="cliphonethree != null" >
+        #{cliphonethree,jdbcType=VARBINARY},
+      </if>
+      <if test="clibankaccounts != null" >
+        #{clibankaccounts,jdbcType=VARBINARY},
+      </if>
+      <if test="cliopenbank != null" >
+        #{cliopenbank,jdbcType=VARBINARY},
+      </if>
+      <if test="empid != null" >
+        #{empid,jdbcType=VARBINARY},
+      </if>
+      <if test="climobilephone != null" >
+        #{climobilephone,jdbcType=VARBINARY},
+      </if>
+      <if test="cliemail != null" >
+        #{cliemail,jdbcType=VARBINARY},
+      </if>
+      <if test="cliweb != null" >
+        #{cliweb,jdbcType=VARBINARY},
+      </if>
+      <if test="clifaxes != null" >
+        #{clifaxes,jdbcType=VARBINARY},
+      </if>
+      <if test="clidiscount != null" >
+        #{clidiscount,jdbcType=VARBINARY},
+      </if>
+      <if test="clipricestep != null" >
+        #{clipricestep,jdbcType=VARBINARY},
+      </if>
+      <if test="clizhangkuanedu != null" >
+        #{clizhangkuanedu,jdbcType=VARBINARY},
+      </if>
+      <if test="cliremainedu != null" >
+        #{cliremainedu,jdbcType=VARBINARY},
+      </if>
+      <if test="clicondition != null" >
+        #{clicondition,jdbcType=VARBINARY},
+      </if>
+      <if test="clicreditstep != null" >
+        #{clicreditstep,jdbcType=VARBINARY},
+      </if>
+      <if test="cliotherremark != null" >
+        #{cliotherremark,jdbcType=VARBINARY},
+      </if>
+      <if test="safetyone != null" >
+        #{safetyone,jdbcType=VARBINARY},
+      </if>
+      <if test="safetytwo != null" >
+        #{safetytwo,jdbcType=VARBINARY},
+      </if>
+    </trim>
+  </insert>
+</mapper>

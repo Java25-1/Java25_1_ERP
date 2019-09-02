@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.yangtao.dao.EmpolyeeMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Empolyee" >
+    <id column="Empid" property="empid" jdbcType="VARCHAR" />
+    <result column="Empname" property="empname" jdbcType="VARCHAR" />
+    <result column="Empename" property="empename" jdbcType="VARCHAR" />
+    <result column="Depid" property="depid" jdbcType="VARCHAR" />
+    <result column="Empsex" property="empsex" jdbcType="VARCHAR" />
+    <result column="Empcard" property="empcard" jdbcType="VARCHAR" />
+    <result column="Empstate" property="empstate" jdbcType="VARCHAR" />
+    <result column="Empduty" property="empduty" jdbcType="VARCHAR" />
+    <result column="Empphoneone" property="empphoneone" jdbcType="VARCHAR" />
+    <result column="Empphonetwo" property="empphonetwo" jdbcType="VARCHAR" />
+    <result column="Empphonethree" property="empphonethree" jdbcType="VARCHAR" />
+    <result column="Empbankaccounts" property="empbankaccounts" jdbcType="VARCHAR" />
+    <result column="Empbirthday" property="empbirthday" jdbcType="DATE" />
+    <result column="Empjob" property="empjob" jdbcType="VARCHAR" />
+    <result column="Empemail" property="empemail" jdbcType="VARCHAR" />
+    <result column="Empweb" property="empweb" jdbcType="VARCHAR" />
+    <result column="Empfaxes" property="empfaxes" jdbcType="VARCHAR" />
+    <result column="Empopenbank" property="empopenbank" jdbcType="VARCHAR" />
+    <result column="Emptop" property="emptop" jdbcType="VARCHAR" />
+    <result column="Empdegree" property="empdegree" jdbcType="VARCHAR" />
+    <result column="Empgotime" property="empgotime" jdbcType="DATE" />
+    <result column="Empgraduatetime" property="empgraduatetime" jdbcType="VARCHAR" />
+    <result column="Emppactstarttime" property="emppactstarttime" jdbcType="DATE" />
+    <result column="Emppactendtime" property="emppactendtime" jdbcType="DATE" />
+    <result column="Empnowmailid" property="empnowmailid" jdbcType="VARCHAR" />
+    <result column="Empfamilyphone" property="empfamilyphone" jdbcType="VARCHAR" />
+    <result column="Empfamilyplace" property="empfamilyplace" jdbcType="VARCHAR" />
+    <result column="Empnowphone" property="empnowphone" jdbcType="VARCHAR" />
+    <result column="Empnowplace" property="empnowplace" jdbcType="VARCHAR" />
+    <result column="Empexigenceman" property="empexigenceman" jdbcType="VARCHAR" />
+    <result column="Empfamilymailid" property="empfamilymailid" jdbcType="VARCHAR" />
+    <result column="Empremark" property="empremark" jdbcType="VARCHAR" />
+    <result column="Emptrash" property="emptrash" jdbcType="INTEGER" />
+    <result column="Safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="Safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+    <result column="Enables" property="enables" jdbcType="INTEGER" />
+    <result column="Extend0" property="extend0" jdbcType="VARCHAR" />
+    <result column="Extend1" property="extend1" jdbcType="VARCHAR" />
+    <result column="Extend2" property="extend2" jdbcType="VARCHAR" />
+    <result column="Extend3" property="extend3" jdbcType="VARCHAR" />
+    <result column="Extend4" property="extend4" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Empid, Empname, Empename, Depid, Empsex, Empcard, Empstate, Empduty, Empphoneone, 
+    Empphonetwo, Empphonethree, Empbankaccounts, Empbirthday, Empjob, Empemail, Empweb, 
+    Empfaxes, Empopenbank, Emptop, Empdegree, Empgotime, Empgraduatetime, Emppactstarttime, 
+    Emppactendtime, Empnowmailid, Empfamilyphone, Empfamilyplace, Empnowphone, Empnowplace, 
+    Empexigenceman, Empfamilymailid, Empremark, Emptrash, Safetyone, Safetytwo, Enables, 
+    Extend0, Extend1, Extend2, Extend3, Extend4
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from employee
+    where Empid = #{empid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from employee
+    where Empid = #{empid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Empolyee" >
+    insert into employee (Empid, Empname, Empename, 
+      Depid, Empsex, Empcard, 
+      Empstate, Empduty, Empphoneone, 
+      Empphonetwo, Empphonethree, Empbankaccounts, 
+      Empbirthday, Empjob, Empemail, 
+      Empweb, Empfaxes, Empopenbank, 
+      Emptop, Empdegree, Empgotime, 
+      Empgraduatetime, Emppactstarttime, Emppactendtime, 
+      Empnowmailid, Empfamilyphone, Empfamilyplace, 
+      Empnowphone, Empnowplace, Empexigenceman, 
+      Empfamilymailid, Empremark, Emptrash, 
+      Safetyone, Safetytwo, Enables, 
+      Extend0, Extend1, Extend2, 
+      Extend3, Extend4)
+    values (#{empid,jdbcType=VARCHAR}, #{empname,jdbcType=VARCHAR}, #{empename,jdbcType=VARCHAR}, 
+      #{depid,jdbcType=VARCHAR}, #{empsex,jdbcType=VARCHAR}, #{empcard,jdbcType=VARCHAR}, 
+      #{empstate,jdbcType=VARCHAR}, #{empduty,jdbcType=VARCHAR}, #{empphoneone,jdbcType=VARCHAR}, 
+      #{empphonetwo,jdbcType=VARCHAR}, #{empphonethree,jdbcType=VARCHAR}, #{empbankaccounts,jdbcType=VARCHAR}, 
+      #{empbirthday,jdbcType=DATE}, #{empjob,jdbcType=VARCHAR}, #{empemail,jdbcType=VARCHAR}, 
+      #{empweb,jdbcType=VARCHAR}, #{empfaxes,jdbcType=VARCHAR}, #{empopenbank,jdbcType=VARCHAR}, 
+      #{emptop,jdbcType=VARCHAR}, #{empdegree,jdbcType=VARCHAR}, #{empgotime,jdbcType=DATE}, 
+      #{empgraduatetime,jdbcType=VARCHAR}, #{emppactstarttime,jdbcType=DATE}, #{emppactendtime,jdbcType=DATE}, 
+      #{empnowmailid,jdbcType=VARCHAR}, #{empfamilyphone,jdbcType=VARCHAR}, #{empfamilyplace,jdbcType=VARCHAR}, 
+      #{empnowphone,jdbcType=VARCHAR}, #{empnowplace,jdbcType=VARCHAR}, #{empexigenceman,jdbcType=VARCHAR}, 
+      #{empfamilymailid,jdbcType=VARCHAR}, #{empremark,jdbcType=VARCHAR}, #{emptrash,jdbcType=INTEGER}, 
+      #{safetyone,jdbcType=VARCHAR}, #{safetytwo,jdbcType=VARCHAR}, #{enables,jdbcType=INTEGER}, 
+      #{extend0,jdbcType=VARCHAR}, #{extend1,jdbcType=VARCHAR}, #{extend2,jdbcType=VARCHAR}, 
+      #{extend3,jdbcType=VARCHAR}, #{extend4,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Empolyee" >
+    insert into employee
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="empid != null" >
+        Empid,
+      </if>
+      <if test="empname != null" >
+        Empname,
+      </if>
+      <if test="empename != null" >
+        Empename,
+      </if>
+      <if test="depid != null" >
+        Depid,
+      </if>
+      <if test="empsex != null" >
+        Empsex,
+      </if>
+      <if test="empcard != null" >
+        Empcard,
+      </if>
+      <if test="empstate != null" >
+        Empstate,
+      </if>
+      <if test="empduty != null" >
+        Empduty,
+      </if>
+      <if test="empphoneone != null" >
+        Empphoneone,
+      </if>
+      <if test="empphonetwo != null" >
+        Empphonetwo,
+      </if>
+      <if test="empphonethree != null" >
+        Empphonethree,
+      </if>
+      <if test="empbankaccounts != null" >
+        Empbankaccounts,
+      </if>
+      <if test="empbirthday != null" >
+        Empbirthday,
+      </if>
+      <if test="empjob != null" >
+        Empjob,
+      </if>
+      <if test="empemail != null" >
+        Empemail,
+      </if>
+      <if test="empweb != null" >
+        Empweb,
+      </if>
+      <if test="empfaxes != null" >
+        Empfaxes,
+      </if>
+      <if test="empopenbank != null" >
+        Empopenbank,
+      </if>
+      <if test="emptop != null" >
+        Emptop,
+      </if>
+      <if test="empdegree != null" >
+        Empdegree,
+      </if>
+      <if test="empgotime != null" >
+        Empgotime,
+      </if>
+      <if test="empgraduatetime != null" >
+        Empgraduatetime,
+      </if>
+      <if test="emppactstarttime != null" >
+        Emppactstarttime,
+      </if>
+      <if test="emppactendtime != null" >
+        Emppactendtime,
+      </if>
+      <if test="empnowmailid != null" >
+        Empnowmailid,
+      </if>
+      <if test="empfamilyphone != null" >
+        Empfamilyphone,
+      </if>
+      <if test="empfamilyplace != null" >
+        Empfamilyplace,
+      </if>
+      <if test="empnowphone != null" >
+        Empnowphone,
+      </if>
+      <if test="empnowplace != null" >
+        Empnowplace,
+      </if>
+      <if test="empexigenceman != null" >
+        Empexigenceman,
+      </if>
+      <if test="empfamilymailid != null" >
+        Empfamilymailid,
+      </if>
+      <if test="empremark != null" >
+        Empremark,
+      </if>
+      <if test="emptrash != null" >
+        Emptrash,
+      </if>
+      <if test="safetyone != null" >
+        Safetyone,
+      </if>
+      <if test="safetytwo != null" >
+        Safetytwo,
+      </if>
+      <if test="enables != null" >
+        Enables,
+      </if>
+      <if test="extend0 != null" >
+        Extend0,
+      </if>
+      <if test="extend1 != null" >
+        Extend1,
+      </if>
+      <if test="extend2 != null" >
+        Extend2,
+      </if>
+      <if test="extend3 != null" >
+        Extend3,
+      </if>
+      <if test="extend4 != null" >
+        Extend4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="empid != null" >
+        #{empid,jdbcType=VARCHAR},
+      </if>
+      <if test="empname != null" >
+        #{empname,jdbcType=VARCHAR},
+      </if>
+      <if test="empename != null" >
+        #{empename,jdbcType=VARCHAR},
+      </if>
+      <if test="depid != null" >
+        #{depid,jdbcType=VARCHAR},
+      </if>
+      <if test="empsex != null" >
+        #{empsex,jdbcType=VARCHAR},
+      </if>
+      <if test="empcard != null" >
+        #{empcard,jdbcType=VARCHAR},
+      </if>
+      <if test="empstate != null" >
+        #{empstate,jdbcType=VARCHAR},
+      </if>
+      <if test="empduty != null" >
+        #{empduty,jdbcType=VARCHAR},
+      </if>
+      <if test="empphoneone != null" >
+        #{empphoneone,jdbcType=VARCHAR},
+      </if>
+      <if test="empphonetwo != null" >
+        #{empphonetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="empphonethree != null" >
+        #{empphonethree,jdbcType=VARCHAR},
+      </if>
+      <if test="empbankaccounts != null" >
+        #{empbankaccounts,jdbcType=VARCHAR},
+      </if>
+      <if test="empbirthday != null" >
+        #{empbirthday,jdbcType=DATE},
+      </if>
+      <if test="empjob != null" >
+        #{empjob,jdbcType=VARCHAR},
+      </if>
+      <if test="empemail != null" >
+        #{empemail,jdbcType=VARCHAR},
+      </if>
+      <if test="empweb != null" >
+        #{empweb,jdbcType=VARCHAR},
+      </if>
+      <if test="empfaxes != null" >
+        #{empfaxes,jdbcType=VARCHAR},
+      </if>
+      <if test="empopenbank != null" >
+        #{empopenbank,jdbcType=VARCHAR},
+      </if>
+      <if test="emptop != null" >
+        #{emptop,jdbcType=VARCHAR},
+      </if>
+      <if test="empdegree != null" >
+        #{empdegree,jdbcType=VARCHAR},
+      </if>
+      <if test="empgotime != null" >
+        #{empgotime,jdbcType=DATE},
+      </if>
+      <if test="empgraduatetime != null" >
+        #{empgraduatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="emppactstarttime != null" >
+        #{emppactstarttime,jdbcType=DATE},
+      </if>
+      <if test="emppactendtime != null" >
+        #{emppactendtime,jdbcType=DATE},
+      </if>
+      <if test="empnowmailid != null" >
+        #{empnowmailid,jdbcType=VARCHAR},
+      </if>
+      <if test="empfamilyphone != null" >
+        #{empfamilyphone,jdbcType=VARCHAR},
+      </if>
+      <if test="empfamilyplace != null" >
+        #{empfamilyplace,jdbcType=VARCHAR},
+      </if>
+      <if test="empnowphone != null" >
+        #{empnowphone,jdbcType=VARCHAR},
+      </if>
+      <if test="empnowplace != null" >
+        #{empnowplace,jdbcType=VARCHAR},
+      </if>
+      <if test="empexigenceman != null" >
+        #{empexigenceman,jdbcType=VARCHAR},
+      </if>
+      <if test="empfamilymailid != null" >
+        #{empfamilymailid,jdbcType=VARCHAR},
+      </if>
+      <if test="empremark != null" >
+        #{empremark,jdbcType=VARCHAR},
+      </if>
+      <if test="emptrash != null" >
+        #{emptrash,jdbcType=INTEGER},
+      </if>
+      <if test="safetyone != null" >
+        #{safetyone,jdbcType=VARCHAR},
+      </if>
+      <if test="safetytwo != null" >
+        #{safetytwo,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        #{extend4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.accp.erp.yangtao.pojo.Empolyee" >
+    update employee
+    <set >
+      <if test="empname != null" >
+        Empname = #{empname,jdbcType=VARCHAR},
+      </if>
+      <if test="empename != null" >
+        Empename = #{empename,jdbcType=VARCHAR},
+      </if>
+      <if test="depid != null" >
+        Depid = #{depid,jdbcType=VARCHAR},
+      </if>
+      <if test="empsex != null" >
+        Empsex = #{empsex,jdbcType=VARCHAR},
+      </if>
+      <if test="empcard != null" >
+        Empcard = #{empcard,jdbcType=VARCHAR},
+      </if>
+      <if test="empstate != null" >
+        Empstate = #{empstate,jdbcType=VARCHAR},
+      </if>
+      <if test="empduty != null" >
+        Empduty = #{empduty,jdbcType=VARCHAR},
+      </if>
+      <if test="empphoneone != null" >
+        Empphoneone = #{empphoneone,jdbcType=VARCHAR},
+      </if>
+      <if test="empphonetwo != null" >
+        Empphonetwo = #{empphonetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="empphonethree != null" >
+        Empphonethree = #{empphonethree,jdbcType=VARCHAR},
+      </if>
+      <if test="empbankaccounts != null" >
+        Empbankaccounts = #{empbankaccounts,jdbcType=VARCHAR},
+      </if>
+      <if test="empbirthday != null" >
+        Empbirthday = #{empbirthday,jdbcType=DATE},
+      </if>
+      <if test="empjob != null" >
+        Empjob = #{empjob,jdbcType=VARCHAR},
+      </if>
+      <if test="empemail != null" >
+        Empemail = #{empemail,jdbcType=VARCHAR},
+      </if>
+      <if test="empweb != null" >
+        Empweb = #{empweb,jdbcType=VARCHAR},
+      </if>
+      <if test="empfaxes != null" >
+        Empfaxes = #{empfaxes,jdbcType=VARCHAR},
+      </if>
+      <if test="empopenbank != null" >
+        Empopenbank = #{empopenbank,jdbcType=VARCHAR},
+      </if>
+      <if test="emptop != null" >
+        Emptop = #{emptop,jdbcType=VARCHAR},
+      </if>
+      <if test="empdegree != null" >
+        Empdegree = #{empdegree,jdbcType=VARCHAR},
+      </if>
+      <if test="empgotime != null" >
+        Empgotime = #{empgotime,jdbcType=DATE},
+      </if>
+      <if test="empgraduatetime != null" >
+        Empgraduatetime = #{empgraduatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="emppactstarttime != null" >
+        Emppactstarttime = #{emppactstarttime,jdbcType=DATE},
+      </if>
+      <if test="emppactendtime != null" >
+        Emppactendtime = #{emppactendtime,jdbcType=DATE},
+      </if>
+      <if test="empnowmailid != null" >
+        Empnowmailid = #{empnowmailid,jdbcType=VARCHAR},
+      </if>
+      <if test="empfamilyphone != null" >
+        Empfamilyphone = #{empfamilyphone,jdbcType=VARCHAR},
+      </if>
+      <if test="empfamilyplace != null" >
+        Empfamilyplace = #{empfamilyplace,jdbcType=VARCHAR},
+      </if>
+      <if test="empnowphone != null" >
+        Empnowphone = #{empnowphone,jdbcType=VARCHAR},
+      </if>
+      <if test="empnowplace != null" >
+        Empnowplace = #{empnowplace,jdbcType=VARCHAR},
+      </if>
+      <if test="empexigenceman != null" >
+        Empexigenceman = #{empexigenceman,jdbcType=VARCHAR},
+      </if>
+      <if test="empfamilymailid != null" >
+        Empfamilymailid = #{empfamilymailid,jdbcType=VARCHAR},
+      </if>
+      <if test="empremark != null" >
+        Empremark = #{empremark,jdbcType=VARCHAR},
+      </if>
+      <if test="emptrash != null" >
+        Emptrash = #{emptrash,jdbcType=INTEGER},
+      </if>
+      <if test="safetyone != null" >
+        Safetyone = #{safetyone,jdbcType=VARCHAR},
+      </if>
+      <if test="safetytwo != null" >
+        Safetytwo = #{safetytwo,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        Enables = #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        Extend0 = #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        Extend1 = #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        Extend2 = #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        Extend3 = #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        Extend4 = #{extend4,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Empid = #{empid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.accp.erp.yangtao.pojo.Empolyee" >
+    update employee
+    set Empname = #{empname,jdbcType=VARCHAR},
+      Empename = #{empename,jdbcType=VARCHAR},
+      Depid = #{depid,jdbcType=VARCHAR},
+      Empsex = #{empsex,jdbcType=VARCHAR},
+      Empcard = #{empcard,jdbcType=VARCHAR},
+      Empstate = #{empstate,jdbcType=VARCHAR},
+      Empduty = #{empduty,jdbcType=VARCHAR},
+      Empphoneone = #{empphoneone,jdbcType=VARCHAR},
+      Empphonetwo = #{empphonetwo,jdbcType=VARCHAR},
+      Empphonethree = #{empphonethree,jdbcType=VARCHAR},
+      Empbankaccounts = #{empbankaccounts,jdbcType=VARCHAR},
+      Empbirthday = #{empbirthday,jdbcType=DATE},
+      Empjob = #{empjob,jdbcType=VARCHAR},
+      Empemail = #{empemail,jdbcType=VARCHAR},
+      Empweb = #{empweb,jdbcType=VARCHAR},
+      Empfaxes = #{empfaxes,jdbcType=VARCHAR},
+      Empopenbank = #{empopenbank,jdbcType=VARCHAR},
+      Emptop = #{emptop,jdbcType=VARCHAR},
+      Empdegree = #{empdegree,jdbcType=VARCHAR},
+      Empgotime = #{empgotime,jdbcType=DATE},
+      Empgraduatetime = #{empgraduatetime,jdbcType=VARCHAR},
+      Emppactstarttime = #{emppactstarttime,jdbcType=DATE},
+      Emppactendtime = #{emppactendtime,jdbcType=DATE},
+      Empnowmailid = #{empnowmailid,jdbcType=VARCHAR},
+      Empfamilyphone = #{empfamilyphone,jdbcType=VARCHAR},
+      Empfamilyplace = #{empfamilyplace,jdbcType=VARCHAR},
+      Empnowphone = #{empnowphone,jdbcType=VARCHAR},
+      Empnowplace = #{empnowplace,jdbcType=VARCHAR},
+      Empexigenceman = #{empexigenceman,jdbcType=VARCHAR},
+      Empfamilymailid = #{empfamilymailid,jdbcType=VARCHAR},
+      Empremark = #{empremark,jdbcType=VARCHAR},
+      Emptrash = #{emptrash,jdbcType=INTEGER},
+      Safetyone = #{safetyone,jdbcType=VARCHAR},
+      Safetytwo = #{safetytwo,jdbcType=VARCHAR},
+      Enables = #{enables,jdbcType=INTEGER},
+      Extend0 = #{extend0,jdbcType=VARCHAR},
+      Extend1 = #{extend1,jdbcType=VARCHAR},
+      Extend2 = #{extend2,jdbcType=VARCHAR},
+      Extend3 = #{extend3,jdbcType=VARCHAR},
+      Extend4 = #{extend4,jdbcType=VARCHAR}
+    where Empid = #{empid,jdbcType=VARCHAR}
+  </update>
+</mapper>

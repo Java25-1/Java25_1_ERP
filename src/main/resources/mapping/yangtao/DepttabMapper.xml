@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.accp.erp.xiangyueheng.dao.depttabMapper" >
-  <resultMap id="BaseResultMap" type="com.accp.erp.xiangyueheng.pojo.depttab" >
+<mapper namespace="com.accp.erp.yangtao.dao.DepttabMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Depttab" >
     <id column="Depid" property="depid" jdbcType="INTEGER" />
     <result column="Depname" property="depname" jdbcType="VARCHAR" />
     <result column="Depremark" property="depremark" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
     delete from depttab
     where Depid = #{depid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.accp.erp.xiangyueheng.pojo.depttab" >
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
     insert into depttab (Depid, Depname, Depremark, 
       Deptrash, Extend0, Extend1, 
       Extend2, Extend3, Extend4
@@ -35,7 +35,7 @@
       #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR}, #{extend4,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.accp.erp.xiangyueheng.pojo.depttab" >
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
     insert into depttab
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="depid != null" >
@@ -96,7 +96,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.accp.erp.xiangyueheng.pojo.depttab" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
     update depttab
     <set >
       <if test="depname != null" >
@@ -126,7 +126,7 @@
     </set>
     where Depid = #{depid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.accp.erp.xiangyueheng.pojo.depttab" >
+  <update id="updateByPrimaryKey" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
     update depttab
     set Depname = #{depname,jdbcType=VARCHAR},
       Depremark = #{depremark,jdbcType=VARCHAR},

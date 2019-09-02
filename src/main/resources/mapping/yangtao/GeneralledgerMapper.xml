@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.yangtao.dao.GeneralledgerMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Generalledger" >
+    <result column="Genid" property="genid" jdbcType="INTEGER" />
+    <result column="Genmaterielid" property="genmaterielid" jdbcType="VARCHAR" />
+    <result column="Genstorageno" property="genstorageno" jdbcType="VARCHAR" />
+    <result column="Genstoragename" property="genstoragename" jdbcType="VARCHAR" />
+    <result column="Genexpectstartqty" property="genexpectstartqty" jdbcType="INTEGER" />
+    <result column="Genstandarcost" property="genstandarcost" jdbcType="DECIMAL" />
+    <result column="Genallcost" property="genallcost" jdbcType="DECIMAL" />
+    <result column="Genexpectstartallcost" property="genexpectstartallcost" jdbcType="DECIMAL" />
+    <result column="Gensafetyqty" property="gensafetyqty" jdbcType="INTEGER" />
+    <result column="Genavgcost" property="genavgcost" jdbcType="DECIMAL" />
+    <result column="Genqty" property="genqty" jdbcType="INTEGER" />
+    <result column="Gennowavgcost" property="gennowavgcost" jdbcType="DECIMAL" />
+    <result column="Genstandardcostall" property="genstandardcostall" jdbcType="DECIMAL" />
+    <result column="Gennowcost" property="gennowcost" jdbcType="DECIMAL" />
+    <result column="Safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="Safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+    <result column="Enables" property="enables" jdbcType="INTEGER" />
+    <result column="Extend0" property="extend0" jdbcType="VARCHAR" />
+    <result column="Extend1" property="extend1" jdbcType="VARCHAR" />
+    <result column="Extend2" property="extend2" jdbcType="VARCHAR" />
+    <result column="Extend3" property="extend3" jdbcType="VARCHAR" />
+    <result column="Extend4" property="extend4" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Generalledger" >
+    insert into generalledger (Genid, Genmaterielid, Genstorageno, 
+      Genstoragename, Genexpectstartqty, Genstandarcost, 
+      Genallcost, Genexpectstartallcost, Gensafetyqty, 
+      Genavgcost, Genqty, Gennowavgcost, 
+      Genstandardcostall, Gennowcost, Safetyone, 
+      Safetytwo, Enables, Extend0, 
+      Extend1, Extend2, Extend3, 
+      Extend4)
+    values (#{genid,jdbcType=INTEGER}, #{genmaterielid,jdbcType=VARCHAR}, #{genstorageno,jdbcType=VARCHAR}, 
+      #{genstoragename,jdbcType=VARCHAR}, #{genexpectstartqty,jdbcType=INTEGER}, #{genstandarcost,jdbcType=DECIMAL}, 
+      #{genallcost,jdbcType=DECIMAL}, #{genexpectstartallcost,jdbcType=DECIMAL}, #{gensafetyqty,jdbcType=INTEGER}, 
+      #{genavgcost,jdbcType=DECIMAL}, #{genqty,jdbcType=INTEGER}, #{gennowavgcost,jdbcType=DECIMAL}, 
+      #{genstandardcostall,jdbcType=DECIMAL}, #{gennowcost,jdbcType=DECIMAL}, #{safetyone,jdbcType=VARCHAR}, 
+      #{safetytwo,jdbcType=VARCHAR}, #{enables,jdbcType=INTEGER}, #{extend0,jdbcType=VARCHAR}, 
+      #{extend1,jdbcType=VARCHAR}, #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR}, 
+      #{extend4,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Generalledger" >
+    insert into generalledger
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="genid != null" >
+        Genid,
+      </if>
+      <if test="genmaterielid != null" >
+        Genmaterielid,
+      </if>
+      <if test="genstorageno != null" >
+        Genstorageno,
+      </if>
+      <if test="genstoragename != null" >
+        Genstoragename,
+      </if>
+      <if test="genexpectstartqty != null" >
+        Genexpectstartqty,
+      </if>
+      <if test="genstandarcost != null" >
+        Genstandarcost,
+      </if>
+      <if test="genallcost != null" >
+        Genallcost,
+      </if>
+      <if test="genexpectstartallcost != null" >
+        Genexpectstartallcost,
+      </if>
+      <if test="gensafetyqty != null" >
+        Gensafetyqty,
+      </if>
+      <if test="genavgcost != null" >
+        Genavgcost,
+      </if>
+      <if test="genqty != null" >
+        Genqty,
+      </if>
+      <if test="gennowavgcost != null" >
+        Gennowavgcost,
+      </if>
+      <if test="genstandardcostall != null" >
+        Genstandardcostall,
+      </if>
+      <if test="gennowcost != null" >
+        Gennowcost,
+      </if>
+      <if test="safetyone != null" >
+        Safetyone,
+      </if>
+      <if test="safetytwo != null" >
+        Safetytwo,
+      </if>
+      <if test="enables != null" >
+        Enables,
+      </if>
+      <if test="extend0 != null" >
+        Extend0,
+      </if>
+      <if test="extend1 != null" >
+        Extend1,
+      </if>
+      <if test="extend2 != null" >
+        Extend2,
+      </if>
+      <if test="extend3 != null" >
+        Extend3,
+      </if>
+      <if test="extend4 != null" >
+        Extend4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="genid != null" >
+        #{genid,jdbcType=INTEGER},
+      </if>
+      <if test="genmaterielid != null" >
+        #{genmaterielid,jdbcType=VARCHAR},
+      </if>
+      <if test="genstorageno != null" >
+        #{genstorageno,jdbcType=VARCHAR},
+      </if>
+      <if test="genstoragename != null" >
+        #{genstoragename,jdbcType=VARCHAR},
+      </if>
+      <if test="genexpectstartqty != null" >
+        #{genexpectstartqty,jdbcType=INTEGER},
+      </if>
+      <if test="genstandarcost != null" >
+        #{genstandarcost,jdbcType=DECIMAL},
+      </if>
+      <if test="genallcost != null" >
+        #{genallcost,jdbcType=DECIMAL},
+      </if>
+      <if test="genexpectstartallcost != null" >
+        #{genexpectstartallcost,jdbcType=DECIMAL},
+      </if>
+      <if test="gensafetyqty != null" >
+        #{gensafetyqty,jdbcType=INTEGER},
+      </if>
+      <if test="genavgcost != null" >
+        #{genavgcost,jdbcType=DECIMAL},
+      </if>
+      <if test="genqty != null" >
+        #{genqty,jdbcType=INTEGER},
+      </if>
+      <if test="gennowavgcost != null" >
+        #{gennowavgcost,jdbcType=DECIMAL},
+      </if>
+      <if test="genstandardcostall != null" >
+        #{genstandardcostall,jdbcType=DECIMAL},
+      </if>
+      <if test="gennowcost != null" >
+        #{gennowcost,jdbcType=DECIMAL},
+      </if>
+      <if test="safetyone != null" >
+        #{safetyone,jdbcType=VARCHAR},
+      </if>
+      <if test="safetytwo != null" >
+        #{safetytwo,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        #{extend4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

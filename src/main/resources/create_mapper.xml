@@ -9,22 +9,22 @@
             <property name="suppressAllComments" value="true"/>  
         </commentGenerator>  
         <!--数据库链接URL，用户名、密码 -->  
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/erp" userId="root" password="root">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/erp" userId="root" password="961001">
         </jdbcConnection>
         <javaTypeResolver>  
             <property name="forceBigDecimals" value="false"/>  
         </javaTypeResolver>  
         <!--pojo生成位置-->  
-        <javaModelGenerator targetPackage="com.accp.erp.tansi.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.accp.erp.yangtao.pojo" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>  
             <property name="trimStrings" value="true"/>  
         </javaModelGenerator>  
         <!--映射文件生成位置-->  
-        <sqlMapGenerator targetPackage="mapping/tansi" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapping/yangtao" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>  
         </sqlMapGenerator>  
         <!--dao生成位置-->  
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.tansi.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.accp.erp.yangtao.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>  
         </javaClientGenerator>  
         <!-- 
@@ -32,7 +32,26 @@
 		domainObjectName是实体类名
 		-->  
 		<!--表1-->
-        <table tableName="movestorage" domainObjectName="Movestorage" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="employee" domainObjectName="Empolyee" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 		<!--表2-->
+		<table tableName="materiel" domainObjectName="Materiel" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="provideinfo" domainObjectName="Provideinfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="client" domainObjectName="Client" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="generalledger" domainObjectName="Generalledger" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="providetype" domainObjectName="Providetype" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="clienttype" domainObjectName="Clienttype" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="depttab" domainObjectName="Depttab" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        
+        <table tableName="materieltype" domainObjectName="Materieltype" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+    
+    
+    
+    
     </context>  
 </generatorConfiguration>  
