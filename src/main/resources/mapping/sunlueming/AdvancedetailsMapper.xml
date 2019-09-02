@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.AdvancedetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Advancedetails" >
+    <result column="advdetmoney" property="advdetmoney" jdbcType="REAL" />
+    <result column="advdetoddtype" property="advdetoddtype" jdbcType="VARCHAR" />
+    <result column="advdetoddid" property="advdetoddid" jdbcType="VARCHAR" />
+    <result column="advdetdegest" property="advdetdegest" jdbcType="VARCHAR" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+    <result column="safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+    <result column="advid" property="advid" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>

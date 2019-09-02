@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.ClashfundMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Clashfund" >
+    <result column="billId" property="billid" jdbcType="VARCHAR" />
+    <result column="billDate" property="billdate" jdbcType="DATE" />
+    <result column="sinId" property="sinid" jdbcType="INTEGER" />
+    <result column="cliid" property="cliid" jdbcType="VARCHAR" />
+    <result column="clishortname" property="clishortname" jdbcType="VARCHAR" />
+    <result column="currencyType" property="currencytype" jdbcType="VARCHAR" />
+    <result column="ReckonTypeF" property="reckontypef" jdbcType="VARCHAR" />
+    <result column="ReckonTypeS" property="reckontypes" jdbcType="VARCHAR" />
+    <result column="ReckonTypeT" property="reckontypet" jdbcType="VARCHAR" />
+    <result column="ReckonMoneyF" property="reckonmoneyf" jdbcType="REAL" />
+    <result column="ReckonMoneyS" property="reckonmoneys" jdbcType="REAL" />
+    <result column="ReckonMoneyT" property="reckonmoneyt" jdbcType="REAL" />
+    <result column="GatherDiscount" property="gatherdiscount" jdbcType="REAL" />
+    <result column="GatherendaccountMonth" property="gatherendaccountmonth" jdbcType="DATE" />
+    <result column="empid" property="empid" jdbcType="VARCHAR" />
+    <result column="empName" property="empname" jdbcType="VARCHAR" />
+    <result column="depid" property="depid" jdbcType="VARCHAR" />
+    <result column="depName" property="depname" jdbcType="VARCHAR" />
+    <result column="makeEmpName" property="makeempname" jdbcType="VARCHAR" />
+    <result column="AuditingEmpName" property="auditingempname" jdbcType="VARCHAR" />
+    <result column="checkstate" property="checkstate" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+    <result column="safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>

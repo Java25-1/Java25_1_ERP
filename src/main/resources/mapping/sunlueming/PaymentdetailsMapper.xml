@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.sunlueming.dao.PaymentdetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.sunlueming.pojo.Paymentdetails" >
+    <result column="billId" property="billid" jdbcType="VARCHAR" />
+    <result column="coteMark" property="cotemark" jdbcType="INTEGER" />
+    <result column="sinName" property="sinname" jdbcType="VARCHAR" />
+    <result column="originBillId" property="originbillid" jdbcType="VARCHAR" />
+    <result column="originoddDate" property="originodddate" jdbcType="DATE" />
+    <result column="originoddMoney" property="originoddmoney" jdbcType="REAL" />
+    <result column="currentlybalance" property="currentlybalance" jdbcType="REAL" />
+    <result column="discountMoney" property="discountmoney" jdbcType="REAL" />
+    <result column="clashMoney" property="clashmoney" jdbcType="REAL" />
+    <result column="Offsetbytheamountof" property="offsetbytheamountof" jdbcType="REAL" />
+    <result column="enables" property="enables" jdbcType="INTEGER" />
+    <result column="invoicenumber" property="invoicenumber" jdbcType="VARCHAR" />
+    <result column="tradingname" property="tradingname" jdbcType="VARCHAR" />
+    <result column="Departmentnumber" property="departmentnumber" jdbcType="VARCHAR" />
+    <result column="departmentname" property="departmentname" jdbcType="VARCHAR" />
+    <result column="buyer" property="buyer" jdbcType="VARCHAR" />
+    <result column="projectname" property="projectname" jdbcType="VARCHAR" />
+    <result column="Currency" property="currency" jdbcType="VARCHAR" />
+    <result column="exchangerate" property="exchangerate" jdbcType="REAL" />
+    <result column="afetyone" property="afetyone" jdbcType="VARCHAR" />
+    <result column="afetytwo" property="afetytwo" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.accp.erp.sunlueming.pojo.Paymentdetails" extends="BaseResultMap" >
+    <result column="tradingobject" property="tradingobject" jdbcType="VARBINARY" />
+  </resultMap>
+
+
+</mapper>
