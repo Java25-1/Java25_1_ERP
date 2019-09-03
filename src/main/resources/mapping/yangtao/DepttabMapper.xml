@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.yangtao.dao.DepttabMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Depttab" >
+    <id column="Depid" property="depid" jdbcType="INTEGER" />
+    <result column="Depname" property="depname" jdbcType="VARCHAR" />
+    <result column="Depremark" property="depremark" jdbcType="VARCHAR" />
+    <result column="Deptrash" property="deptrash" jdbcType="VARCHAR" />
+    <result column="Extend0" property="extend0" jdbcType="VARCHAR" />
+    <result column="Extend1" property="extend1" jdbcType="VARCHAR" />
+    <result column="Extend2" property="extend2" jdbcType="VARCHAR" />
+    <result column="Extend3" property="extend3" jdbcType="VARCHAR" />
+    <result column="Extend4" property="extend4" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Depid, Depname, Depremark, Deptrash, Extend0, Extend1, Extend2, Extend3, Extend4
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from depttab
+    where Depid = #{depid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from depttab
+    where Depid = #{depid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
+    insert into depttab (Depid, Depname, Depremark, 
+      Deptrash, Extend0, Extend1, 
+      Extend2, Extend3, Extend4
+      )
+    values (#{depid,jdbcType=INTEGER}, #{depname,jdbcType=VARCHAR}, #{depremark,jdbcType=VARCHAR}, 
+      #{deptrash,jdbcType=VARCHAR}, #{extend0,jdbcType=VARCHAR}, #{extend1,jdbcType=VARCHAR}, 
+      #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR}, #{extend4,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
+    insert into depttab
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="depid != null" >
+        Depid,
+      </if>
+      <if test="depname != null" >
+        Depname,
+      </if>
+      <if test="depremark != null" >
+        Depremark,
+      </if>
+      <if test="deptrash != null" >
+        Deptrash,
+      </if>
+      <if test="extend0 != null" >
+        Extend0,
+      </if>
+      <if test="extend1 != null" >
+        Extend1,
+      </if>
+      <if test="extend2 != null" >
+        Extend2,
+      </if>
+      <if test="extend3 != null" >
+        Extend3,
+      </if>
+      <if test="extend4 != null" >
+        Extend4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="depid != null" >
+        #{depid,jdbcType=INTEGER},
+      </if>
+      <if test="depname != null" >
+        #{depname,jdbcType=VARCHAR},
+      </if>
+      <if test="depremark != null" >
+        #{depremark,jdbcType=VARCHAR},
+      </if>
+      <if test="deptrash != null" >
+        #{deptrash,jdbcType=VARCHAR},
+      </if>
+      <if test="extend0 != null" >
+        #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        #{extend4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
+    update depttab
+    <set >
+      <if test="depname != null" >
+        Depname = #{depname,jdbcType=VARCHAR},
+      </if>
+      <if test="depremark != null" >
+        Depremark = #{depremark,jdbcType=VARCHAR},
+      </if>
+      <if test="deptrash != null" >
+        Deptrash = #{deptrash,jdbcType=VARCHAR},
+      </if>
+      <if test="extend0 != null" >
+        Extend0 = #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        Extend1 = #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        Extend2 = #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        Extend3 = #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        Extend4 = #{extend4,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Depid = #{depid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.accp.erp.yangtao.pojo.Depttab" >
+    update depttab
+    set Depname = #{depname,jdbcType=VARCHAR},
+      Depremark = #{depremark,jdbcType=VARCHAR},
+      Deptrash = #{deptrash,jdbcType=VARCHAR},
+      Extend0 = #{extend0,jdbcType=VARCHAR},
+      Extend1 = #{extend1,jdbcType=VARCHAR},
+      Extend2 = #{extend2,jdbcType=VARCHAR},
+      Extend3 = #{extend3,jdbcType=VARCHAR},
+      Extend4 = #{extend4,jdbcType=VARCHAR}
+    where Depid = #{depid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.yangtao.dao.ProvideinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Provideinfo" >
+    <id column="Peoid" property="peoid" jdbcType="VARCHAR" />
+    <result column="Peoname" property="peoname" jdbcType="VARCHAR" />
+    <result column="Peoshortname" property="peoshortname" jdbcType="VARCHAR" />
+    <result column="Peoascription" property="peoascription" jdbcType="VARCHAR" />
+    <result column="Peopeeid" property="peopeeid" jdbcType="VARCHAR" />
+    <result column="Peopeename" property="peopeename" jdbcType="VARCHAR" />
+    <result column="Peoarea" property="peoarea" jdbcType="VARCHAR" />
+    <result column="Peoprincipal" property="peoprincipal" jdbcType="VARCHAR" />
+    <result column="Peolinkman" property="peolinkman" jdbcType="VARCHAR" />
+    <result column="Peophoneone" property="peophoneone" jdbcType="VARCHAR" />
+    <result column="Peophonetwo" property="peophonetwo" jdbcType="VARCHAR" />
+    <result column="Peomobilephone" property="peomobilephone" jdbcType="VARCHAR" />
+    <result column="Peobankaccounts" property="peobankaccounts" jdbcType="VARCHAR" />
+    <result column="Peoopenbank" property="peoopenbank" jdbcType="VARCHAR" />
+    <result column="Peoempid" property="peoempid" jdbcType="VARCHAR" />
+    <result column="Peoempname" property="peoempname" jdbcType="VARCHAR" />
+    <result column="Peocalling" property="peocalling" jdbcType="VARCHAR" />
+    <result column="Peoemail" property="peoemail" jdbcType="VARCHAR" />
+    <result column="Peoweb" property="peoweb" jdbcType="VARCHAR" />
+    <result column="Peofaxes" property="peofaxes" jdbcType="VARCHAR" />
+    <result column="Peocreatedate" property="peocreatedate" jdbcType="VARCHAR" />
+    <result column="Peocreditclass" property="peocreditclass" jdbcType="VARCHAR" />
+    <result column="Peozhangkuanedu" property="peozhangkuanedu" jdbcType="DECIMAL" />
+    <result column="Peoremainedu" property="peoremainedu" jdbcType="DECIMAL" />
+    <result column="Peomonthreckoning" property="peomonthreckoning" jdbcType="DECIMAL" />
+    <result column="Peoqcprepaymoney" property="peoqcprepaymoney" jdbcType="DECIMAL" />
+    <result column="Peoqcdealmoney" property="peoqcdealmoney" jdbcType="DECIMAL" />
+    <result column="Peoqmprepaymoney" property="peoqmprepaymoney" jdbcType="DECIMAL" />
+    <result column="Peoqmdealmoney" property="peoqmdealmoney" jdbcType="DECIMAL" />
+    <result column="Peoremark" property="peoremark" jdbcType="VARCHAR" />
+    <result column="Peotrash" property="peotrash" jdbcType="INTEGER" />
+    <result column="Safetyone" property="safetyone" jdbcType="VARCHAR" />
+    <result column="Safetytwo" property="safetytwo" jdbcType="VARCHAR" />
+    <result column="Enables" property="enables" jdbcType="INTEGER" />
+    <result column="Extend0" property="extend0" jdbcType="VARCHAR" />
+    <result column="Extend1" property="extend1" jdbcType="VARCHAR" />
+    <result column="Extend2" property="extend2" jdbcType="VARCHAR" />
+    <result column="Extend3" property="extend3" jdbcType="VARCHAR" />
+    <result column="Extend4" property="extend4" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Peoid, Peoname, Peoshortname, Peoascription, Peopeeid, Peopeename, Peoarea, Peoprincipal, 
+    Peolinkman, Peophoneone, Peophonetwo, Peomobilephone, Peobankaccounts, Peoopenbank, 
+    Peoempid, Peoempname, Peocalling, Peoemail, Peoweb, Peofaxes, Peocreatedate, Peocreditclass, 
+    Peozhangkuanedu, Peoremainedu, Peomonthreckoning, Peoqcprepaymoney, Peoqcdealmoney, 
+    Peoqmprepaymoney, Peoqmdealmoney, Peoremark, Peotrash, Safetyone, Safetytwo, Enables, 
+    Extend0, Extend1, Extend2, Extend3, Extend4
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from provideinfo
+    where Peoid = #{peoid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from provideinfo
+    where Peoid = #{peoid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Provideinfo" >
+    insert into provideinfo (Peoid, Peoname, Peoshortname, 
+      Peoascription, Peopeeid, Peopeename, 
+      Peoarea, Peoprincipal, Peolinkman, 
+      Peophoneone, Peophonetwo, Peomobilephone, 
+      Peobankaccounts, Peoopenbank, Peoempid, 
+      Peoempname, Peocalling, Peoemail, 
+      Peoweb, Peofaxes, Peocreatedate, 
+      Peocreditclass, Peozhangkuanedu, Peoremainedu, 
+      Peomonthreckoning, Peoqcprepaymoney, Peoqcdealmoney, 
+      Peoqmprepaymoney, Peoqmdealmoney, Peoremark, 
+      Peotrash, Safetyone, Safetytwo, 
+      Enables, Extend0, Extend1, 
+      Extend2, Extend3, Extend4
+      )
+    values (#{peoid,jdbcType=VARCHAR}, #{peoname,jdbcType=VARCHAR}, #{peoshortname,jdbcType=VARCHAR}, 
+      #{peoascription,jdbcType=VARCHAR}, #{peopeeid,jdbcType=VARCHAR}, #{peopeename,jdbcType=VARCHAR}, 
+      #{peoarea,jdbcType=VARCHAR}, #{peoprincipal,jdbcType=VARCHAR}, #{peolinkman,jdbcType=VARCHAR}, 
+      #{peophoneone,jdbcType=VARCHAR}, #{peophonetwo,jdbcType=VARCHAR}, #{peomobilephone,jdbcType=VARCHAR}, 
+      #{peobankaccounts,jdbcType=VARCHAR}, #{peoopenbank,jdbcType=VARCHAR}, #{peoempid,jdbcType=VARCHAR}, 
+      #{peoempname,jdbcType=VARCHAR}, #{peocalling,jdbcType=VARCHAR}, #{peoemail,jdbcType=VARCHAR}, 
+      #{peoweb,jdbcType=VARCHAR}, #{peofaxes,jdbcType=VARCHAR}, #{peocreatedate,jdbcType=VARCHAR}, 
+      #{peocreditclass,jdbcType=VARCHAR}, #{peozhangkuanedu,jdbcType=DECIMAL}, #{peoremainedu,jdbcType=DECIMAL}, 
+      #{peomonthreckoning,jdbcType=DECIMAL}, #{peoqcprepaymoney,jdbcType=DECIMAL}, #{peoqcdealmoney,jdbcType=DECIMAL}, 
+      #{peoqmprepaymoney,jdbcType=DECIMAL}, #{peoqmdealmoney,jdbcType=DECIMAL}, #{peoremark,jdbcType=VARCHAR}, 
+      #{peotrash,jdbcType=INTEGER}, #{safetyone,jdbcType=VARCHAR}, #{safetytwo,jdbcType=VARCHAR}, 
+      #{enables,jdbcType=INTEGER}, #{extend0,jdbcType=VARCHAR}, #{extend1,jdbcType=VARCHAR}, 
+      #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR}, #{extend4,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Provideinfo" >
+    insert into provideinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="peoid != null" >
+        Peoid,
+      </if>
+      <if test="peoname != null" >
+        Peoname,
+      </if>
+      <if test="peoshortname != null" >
+        Peoshortname,
+      </if>
+      <if test="peoascription != null" >
+        Peoascription,
+      </if>
+      <if test="peopeeid != null" >
+        Peopeeid,
+      </if>
+      <if test="peopeename != null" >
+        Peopeename,
+      </if>
+      <if test="peoarea != null" >
+        Peoarea,
+      </if>
+      <if test="peoprincipal != null" >
+        Peoprincipal,
+      </if>
+      <if test="peolinkman != null" >
+        Peolinkman,
+      </if>
+      <if test="peophoneone != null" >
+        Peophoneone,
+      </if>
+      <if test="peophonetwo != null" >
+        Peophonetwo,
+      </if>
+      <if test="peomobilephone != null" >
+        Peomobilephone,
+      </if>
+      <if test="peobankaccounts != null" >
+        Peobankaccounts,
+      </if>
+      <if test="peoopenbank != null" >
+        Peoopenbank,
+      </if>
+      <if test="peoempid != null" >
+        Peoempid,
+      </if>
+      <if test="peoempname != null" >
+        Peoempname,
+      </if>
+      <if test="peocalling != null" >
+        Peocalling,
+      </if>
+      <if test="peoemail != null" >
+        Peoemail,
+      </if>
+      <if test="peoweb != null" >
+        Peoweb,
+      </if>
+      <if test="peofaxes != null" >
+        Peofaxes,
+      </if>
+      <if test="peocreatedate != null" >
+        Peocreatedate,
+      </if>
+      <if test="peocreditclass != null" >
+        Peocreditclass,
+      </if>
+      <if test="peozhangkuanedu != null" >
+        Peozhangkuanedu,
+      </if>
+      <if test="peoremainedu != null" >
+        Peoremainedu,
+      </if>
+      <if test="peomonthreckoning != null" >
+        Peomonthreckoning,
+      </if>
+      <if test="peoqcprepaymoney != null" >
+        Peoqcprepaymoney,
+      </if>
+      <if test="peoqcdealmoney != null" >
+        Peoqcdealmoney,
+      </if>
+      <if test="peoqmprepaymoney != null" >
+        Peoqmprepaymoney,
+      </if>
+      <if test="peoqmdealmoney != null" >
+        Peoqmdealmoney,
+      </if>
+      <if test="peoremark != null" >
+        Peoremark,
+      </if>
+      <if test="peotrash != null" >
+        Peotrash,
+      </if>
+      <if test="safetyone != null" >
+        Safetyone,
+      </if>
+      <if test="safetytwo != null" >
+        Safetytwo,
+      </if>
+      <if test="enables != null" >
+        Enables,
+      </if>
+      <if test="extend0 != null" >
+        Extend0,
+      </if>
+      <if test="extend1 != null" >
+        Extend1,
+      </if>
+      <if test="extend2 != null" >
+        Extend2,
+      </if>
+      <if test="extend3 != null" >
+        Extend3,
+      </if>
+      <if test="extend4 != null" >
+        Extend4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="peoid != null" >
+        #{peoid,jdbcType=VARCHAR},
+      </if>
+      <if test="peoname != null" >
+        #{peoname,jdbcType=VARCHAR},
+      </if>
+      <if test="peoshortname != null" >
+        #{peoshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="peoascription != null" >
+        #{peoascription,jdbcType=VARCHAR},
+      </if>
+      <if test="peopeeid != null" >
+        #{peopeeid,jdbcType=VARCHAR},
+      </if>
+      <if test="peopeename != null" >
+        #{peopeename,jdbcType=VARCHAR},
+      </if>
+      <if test="peoarea != null" >
+        #{peoarea,jdbcType=VARCHAR},
+      </if>
+      <if test="peoprincipal != null" >
+        #{peoprincipal,jdbcType=VARCHAR},
+      </if>
+      <if test="peolinkman != null" >
+        #{peolinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="peophoneone != null" >
+        #{peophoneone,jdbcType=VARCHAR},
+      </if>
+      <if test="peophonetwo != null" >
+        #{peophonetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="peomobilephone != null" >
+        #{peomobilephone,jdbcType=VARCHAR},
+      </if>
+      <if test="peobankaccounts != null" >
+        #{peobankaccounts,jdbcType=VARCHAR},
+      </if>
+      <if test="peoopenbank != null" >
+        #{peoopenbank,jdbcType=VARCHAR},
+      </if>
+      <if test="peoempid != null" >
+        #{peoempid,jdbcType=VARCHAR},
+      </if>
+      <if test="peoempname != null" >
+        #{peoempname,jdbcType=VARCHAR},
+      </if>
+      <if test="peocalling != null" >
+        #{peocalling,jdbcType=VARCHAR},
+      </if>
+      <if test="peoemail != null" >
+        #{peoemail,jdbcType=VARCHAR},
+      </if>
+      <if test="peoweb != null" >
+        #{peoweb,jdbcType=VARCHAR},
+      </if>
+      <if test="peofaxes != null" >
+        #{peofaxes,jdbcType=VARCHAR},
+      </if>
+      <if test="peocreatedate != null" >
+        #{peocreatedate,jdbcType=VARCHAR},
+      </if>
+      <if test="peocreditclass != null" >
+        #{peocreditclass,jdbcType=VARCHAR},
+      </if>
+      <if test="peozhangkuanedu != null" >
+        #{peozhangkuanedu,jdbcType=DECIMAL},
+      </if>
+      <if test="peoremainedu != null" >
+        #{peoremainedu,jdbcType=DECIMAL},
+      </if>
+      <if test="peomonthreckoning != null" >
+        #{peomonthreckoning,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqcprepaymoney != null" >
+        #{peoqcprepaymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqcdealmoney != null" >
+        #{peoqcdealmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqmprepaymoney != null" >
+        #{peoqmprepaymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqmdealmoney != null" >
+        #{peoqmdealmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoremark != null" >
+        #{peoremark,jdbcType=VARCHAR},
+      </if>
+      <if test="peotrash != null" >
+        #{peotrash,jdbcType=INTEGER},
+      </if>
+      <if test="safetyone != null" >
+        #{safetyone,jdbcType=VARCHAR},
+      </if>
+      <if test="safetytwo != null" >
+        #{safetytwo,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        #{extend4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.accp.erp.yangtao.pojo.Provideinfo" >
+    update provideinfo
+    <set >
+      <if test="peoname != null" >
+        Peoname = #{peoname,jdbcType=VARCHAR},
+      </if>
+      <if test="peoshortname != null" >
+        Peoshortname = #{peoshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="peoascription != null" >
+        Peoascription = #{peoascription,jdbcType=VARCHAR},
+      </if>
+      <if test="peopeeid != null" >
+        Peopeeid = #{peopeeid,jdbcType=VARCHAR},
+      </if>
+      <if test="peopeename != null" >
+        Peopeename = #{peopeename,jdbcType=VARCHAR},
+      </if>
+      <if test="peoarea != null" >
+        Peoarea = #{peoarea,jdbcType=VARCHAR},
+      </if>
+      <if test="peoprincipal != null" >
+        Peoprincipal = #{peoprincipal,jdbcType=VARCHAR},
+      </if>
+      <if test="peolinkman != null" >
+        Peolinkman = #{peolinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="peophoneone != null" >
+        Peophoneone = #{peophoneone,jdbcType=VARCHAR},
+      </if>
+      <if test="peophonetwo != null" >
+        Peophonetwo = #{peophonetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="peomobilephone != null" >
+        Peomobilephone = #{peomobilephone,jdbcType=VARCHAR},
+      </if>
+      <if test="peobankaccounts != null" >
+        Peobankaccounts = #{peobankaccounts,jdbcType=VARCHAR},
+      </if>
+      <if test="peoopenbank != null" >
+        Peoopenbank = #{peoopenbank,jdbcType=VARCHAR},
+      </if>
+      <if test="peoempid != null" >
+        Peoempid = #{peoempid,jdbcType=VARCHAR},
+      </if>
+      <if test="peoempname != null" >
+        Peoempname = #{peoempname,jdbcType=VARCHAR},
+      </if>
+      <if test="peocalling != null" >
+        Peocalling = #{peocalling,jdbcType=VARCHAR},
+      </if>
+      <if test="peoemail != null" >
+        Peoemail = #{peoemail,jdbcType=VARCHAR},
+      </if>
+      <if test="peoweb != null" >
+        Peoweb = #{peoweb,jdbcType=VARCHAR},
+      </if>
+      <if test="peofaxes != null" >
+        Peofaxes = #{peofaxes,jdbcType=VARCHAR},
+      </if>
+      <if test="peocreatedate != null" >
+        Peocreatedate = #{peocreatedate,jdbcType=VARCHAR},
+      </if>
+      <if test="peocreditclass != null" >
+        Peocreditclass = #{peocreditclass,jdbcType=VARCHAR},
+      </if>
+      <if test="peozhangkuanedu != null" >
+        Peozhangkuanedu = #{peozhangkuanedu,jdbcType=DECIMAL},
+      </if>
+      <if test="peoremainedu != null" >
+        Peoremainedu = #{peoremainedu,jdbcType=DECIMAL},
+      </if>
+      <if test="peomonthreckoning != null" >
+        Peomonthreckoning = #{peomonthreckoning,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqcprepaymoney != null" >
+        Peoqcprepaymoney = #{peoqcprepaymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqcdealmoney != null" >
+        Peoqcdealmoney = #{peoqcdealmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqmprepaymoney != null" >
+        Peoqmprepaymoney = #{peoqmprepaymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoqmdealmoney != null" >
+        Peoqmdealmoney = #{peoqmdealmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="peoremark != null" >
+        Peoremark = #{peoremark,jdbcType=VARCHAR},
+      </if>
+      <if test="peotrash != null" >
+        Peotrash = #{peotrash,jdbcType=INTEGER},
+      </if>
+      <if test="safetyone != null" >
+        Safetyone = #{safetyone,jdbcType=VARCHAR},
+      </if>
+      <if test="safetytwo != null" >
+        Safetytwo = #{safetytwo,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        Enables = #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        Extend0 = #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        Extend1 = #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        Extend2 = #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        Extend3 = #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        Extend4 = #{extend4,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Peoid = #{peoid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.accp.erp.yangtao.pojo.Provideinfo" >
+    update provideinfo
+    set Peoname = #{peoname,jdbcType=VARCHAR},
+      Peoshortname = #{peoshortname,jdbcType=VARCHAR},
+      Peoascription = #{peoascription,jdbcType=VARCHAR},
+      Peopeeid = #{peopeeid,jdbcType=VARCHAR},
+      Peopeename = #{peopeename,jdbcType=VARCHAR},
+      Peoarea = #{peoarea,jdbcType=VARCHAR},
+      Peoprincipal = #{peoprincipal,jdbcType=VARCHAR},
+      Peolinkman = #{peolinkman,jdbcType=VARCHAR},
+      Peophoneone = #{peophoneone,jdbcType=VARCHAR},
+      Peophonetwo = #{peophonetwo,jdbcType=VARCHAR},
+      Peomobilephone = #{peomobilephone,jdbcType=VARCHAR},
+      Peobankaccounts = #{peobankaccounts,jdbcType=VARCHAR},
+      Peoopenbank = #{peoopenbank,jdbcType=VARCHAR},
+      Peoempid = #{peoempid,jdbcType=VARCHAR},
+      Peoempname = #{peoempname,jdbcType=VARCHAR},
+      Peocalling = #{peocalling,jdbcType=VARCHAR},
+      Peoemail = #{peoemail,jdbcType=VARCHAR},
+      Peoweb = #{peoweb,jdbcType=VARCHAR},
+      Peofaxes = #{peofaxes,jdbcType=VARCHAR},
+      Peocreatedate = #{peocreatedate,jdbcType=VARCHAR},
+      Peocreditclass = #{peocreditclass,jdbcType=VARCHAR},
+      Peozhangkuanedu = #{peozhangkuanedu,jdbcType=DECIMAL},
+      Peoremainedu = #{peoremainedu,jdbcType=DECIMAL},
+      Peomonthreckoning = #{peomonthreckoning,jdbcType=DECIMAL},
+      Peoqcprepaymoney = #{peoqcprepaymoney,jdbcType=DECIMAL},
+      Peoqcdealmoney = #{peoqcdealmoney,jdbcType=DECIMAL},
+      Peoqmprepaymoney = #{peoqmprepaymoney,jdbcType=DECIMAL},
+      Peoqmdealmoney = #{peoqmdealmoney,jdbcType=DECIMAL},
+      Peoremark = #{peoremark,jdbcType=VARCHAR},
+      Peotrash = #{peotrash,jdbcType=INTEGER},
+      Safetyone = #{safetyone,jdbcType=VARCHAR},
+      Safetytwo = #{safetytwo,jdbcType=VARCHAR},
+      Enables = #{enables,jdbcType=INTEGER},
+      Extend0 = #{extend0,jdbcType=VARCHAR},
+      Extend1 = #{extend1,jdbcType=VARCHAR},
+      Extend2 = #{extend2,jdbcType=VARCHAR},
+      Extend3 = #{extend3,jdbcType=VARCHAR},
+      Extend4 = #{extend4,jdbcType=VARCHAR}
+    where Peoid = #{peoid,jdbcType=VARCHAR}
+  </update>
+</mapper>

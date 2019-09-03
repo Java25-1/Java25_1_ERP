@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.erp.yangtao.dao.ProvidetypeMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.erp.yangtao.pojo.Providetype" >
+    <id column="Peeid" property="peeid" jdbcType="INTEGER" />
+    <result column="Peename" property="peename" jdbcType="VARCHAR" />
+    <result column="Peeename" property="peeename" jdbcType="VARCHAR" />
+    <result column="Peeremark" property="peeremark" jdbcType="VARCHAR" />
+    <result column="Enables" property="enables" jdbcType="INTEGER" />
+    <result column="Extend0" property="extend0" jdbcType="VARCHAR" />
+    <result column="Extend1" property="extend1" jdbcType="VARCHAR" />
+    <result column="Extend2" property="extend2" jdbcType="VARCHAR" />
+    <result column="Extend3" property="extend3" jdbcType="VARCHAR" />
+    <result column="Extend4" property="extend4" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Peeid, Peename, Peeename, Peeremark, Enables, Extend0, Extend1, Extend2, Extend3, 
+    Extend4
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from providetype
+    where Peeid = #{peeid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from providetype
+    where Peeid = #{peeid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.accp.erp.yangtao.pojo.Providetype" >
+    insert into providetype (Peeid, Peename, Peeename, 
+      Peeremark, Enables, Extend0, 
+      Extend1, Extend2, Extend3, 
+      Extend4)
+    values (#{peeid,jdbcType=INTEGER}, #{peename,jdbcType=VARCHAR}, #{peeename,jdbcType=VARCHAR}, 
+      #{peeremark,jdbcType=VARCHAR}, #{enables,jdbcType=INTEGER}, #{extend0,jdbcType=VARCHAR}, 
+      #{extend1,jdbcType=VARCHAR}, #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR}, 
+      #{extend4,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.erp.yangtao.pojo.Providetype" >
+    insert into providetype
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="peeid != null" >
+        Peeid,
+      </if>
+      <if test="peename != null" >
+        Peename,
+      </if>
+      <if test="peeename != null" >
+        Peeename,
+      </if>
+      <if test="peeremark != null" >
+        Peeremark,
+      </if>
+      <if test="enables != null" >
+        Enables,
+      </if>
+      <if test="extend0 != null" >
+        Extend0,
+      </if>
+      <if test="extend1 != null" >
+        Extend1,
+      </if>
+      <if test="extend2 != null" >
+        Extend2,
+      </if>
+      <if test="extend3 != null" >
+        Extend3,
+      </if>
+      <if test="extend4 != null" >
+        Extend4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="peeid != null" >
+        #{peeid,jdbcType=INTEGER},
+      </if>
+      <if test="peename != null" >
+        #{peename,jdbcType=VARCHAR},
+      </if>
+      <if test="peeename != null" >
+        #{peeename,jdbcType=VARCHAR},
+      </if>
+      <if test="peeremark != null" >
+        #{peeremark,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        #{extend4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.accp.erp.yangtao.pojo.Providetype" >
+    update providetype
+    <set >
+      <if test="peename != null" >
+        Peename = #{peename,jdbcType=VARCHAR},
+      </if>
+      <if test="peeename != null" >
+        Peeename = #{peeename,jdbcType=VARCHAR},
+      </if>
+      <if test="peeremark != null" >
+        Peeremark = #{peeremark,jdbcType=VARCHAR},
+      </if>
+      <if test="enables != null" >
+        Enables = #{enables,jdbcType=INTEGER},
+      </if>
+      <if test="extend0 != null" >
+        Extend0 = #{extend0,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        Extend1 = #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        Extend2 = #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        Extend3 = #{extend3,jdbcType=VARCHAR},
+      </if>
+      <if test="extend4 != null" >
+        Extend4 = #{extend4,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Peeid = #{peeid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.accp.erp.yangtao.pojo.Providetype" >
+    update providetype
+    set Peename = #{peename,jdbcType=VARCHAR},
+      Peeename = #{peeename,jdbcType=VARCHAR},
+      Peeremark = #{peeremark,jdbcType=VARCHAR},
+      Enables = #{enables,jdbcType=INTEGER},
+      Extend0 = #{extend0,jdbcType=VARCHAR},
+      Extend1 = #{extend1,jdbcType=VARCHAR},
+      Extend2 = #{extend2,jdbcType=VARCHAR},
+      Extend3 = #{extend3,jdbcType=VARCHAR},
+      Extend4 = #{extend4,jdbcType=VARCHAR}
+    where Peeid = #{peeid,jdbcType=INTEGER}
+  </update>
+</mapper>

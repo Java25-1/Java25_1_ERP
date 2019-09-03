@@ -1,13 +1,15 @@
-package com.accp.erp.xiangyueheng.pojo;
+package com.accp.erp.yangtao.pojo;
 
-public class depttab {
-    private Integer depid;
+public class Providetype {
+    private Integer peeid;
 
-    private String depname;
+    private String peename;
 
-    private String depremark;
+    private String peeename;
 
-    private String deptrash;
+    private String peeremark;
+
+    private Integer enables;
 
     private String extend0;
 
@@ -19,36 +21,44 @@ public class depttab {
 
     private String extend4;
 
-    public Integer getDepid() {
-        return depid;
+    public Integer getPeeid() {
+        return peeid;
     }
 
-    public void setDepid(Integer depid) {
-        this.depid = depid;
+    public void setPeeid(Integer peeid) {
+        this.peeid = peeid;
     }
 
-    public String getDepname() {
-        return depname;
+    public String getPeename() {
+        return peename;
     }
 
-    public void setDepname(String depname) {
-        this.depname = depname == null ? null : depname.trim();
+    public void setPeename(String peename) {
+        this.peename = peename == null ? null : peename.trim();
     }
 
-    public String getDepremark() {
-        return depremark;
+    public String getPeeename() {
+        return peeename;
     }
 
-    public void setDepremark(String depremark) {
-        this.depremark = depremark == null ? null : depremark.trim();
+    public void setPeeename(String peeename) {
+        this.peeename = peeename == null ? null : peeename.trim();
     }
 
-    public String getDeptrash() {
-        return deptrash;
+    public String getPeeremark() {
+        return peeremark;
     }
 
-    public void setDeptrash(String deptrash) {
-        this.deptrash = deptrash == null ? null : deptrash.trim();
+    public void setPeeremark(String peeremark) {
+        this.peeremark = peeremark == null ? null : peeremark.trim();
+    }
+
+    public Integer getEnables() {
+        return enables;
+    }
+
+    public void setEnables(Integer enables) {
+        this.enables = enables;
     }
 
     public String getExtend0() {
