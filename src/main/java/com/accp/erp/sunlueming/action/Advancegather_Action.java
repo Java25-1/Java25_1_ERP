@@ -4,6 +4,7 @@ import com.accp.erp.sunlueming.biz.AdvancegatherBiz;
 import com.accp.erp.sunlueming.pojo.Advancegather;
 import com.accp.erp.sunlueming.util.CreateSingleNum;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -41,5 +42,14 @@ public class Advancegather_Action {
     public String singleNum() {
         String code = "YFK";
         return createSingleNum.AddNum(code);
+    }
+
+    /**
+     * @description: 新增预收款单据信息
+     * @author: apple
+     */
+    @RequestMapping("add/Advancegather")
+    public Integer addAdv(@RequestBody Advancegather adv){
+        return biz.addAdvancegather(adv);
     }
 }

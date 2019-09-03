@@ -74,6 +74,9 @@ public class Advancegatherdetails {
         return originbillid;
     }
 
+    public Advancegatherdetails() {
+    }
+
     public void setOriginbillid(Integer originbillid) {
         this.originbillid = originbillid;
     }
