@@ -2,6 +2,8 @@ package com.accp.erp.sunlueming.biz;
 
 import com.accp.erp.sunlueming.dao.AdvancegatherMapper;
 import com.accp.erp.sunlueming.pojo.Advancegather;
+import com.accp.erp.sunlueming.pojo.Advancegatherdetails;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -37,8 +39,8 @@ public class AdvancegatherBiz {
      * @author: apple
      */
     @Transactional(propagation = Propagation.SUPPORTS, isolation = Isolation.READ_COMMITTED, readOnly = true)
-    public List<Advancegather> SelAll(){
-        List<Advancegather> a =maper.selectList(null);
+    public Advancegather SelSome(String billid){
+        Advancegather a =maper.selectById(billid);
         return a;
     }
 

@@ -257,6 +257,9 @@ public class Advancegather {
         return safetytwo;
     }
 
+    public Advancegather() {
+    }
+
     public void setSafetytwo(String safetytwo) {
         this.safetytwo = safetytwo == null ? null : safetytwo.trim();
     }
